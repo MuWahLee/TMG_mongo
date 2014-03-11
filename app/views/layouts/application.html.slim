@@ -1,0 +1,31 @@
+doctype html
+html lang="en"
+  head
+    / meta charset="utf-8"
+    title TallyMyGear
+    = stylesheet_link_tag "//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css", media: "all"
+    / link href="" media= "all" rel="stylesheet"
+    = stylesheet_link_tag "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+
+  body
+    header role="banner"
+      nav class="navbar navbar-default navbar-static-top" role="navigation"
+      div class="container"
+
+        h1 class="header" Tally My Gear
+        h2 class="header" the place to weigh your gear
+
+    == yield
+
+
+  footer
+    div id="footer" class="container"
+      nav class="navbar navbar-default navbar-fixed-bottom" role="navigation"
+        p class="row"
+          div class="navbar-inner navbar-content-center"
+            a href="privacy">Privacy Policy</a> &bull;
+            a href="terms-of-use">Terms of Use</a> &bull;
+            / &copy; 2014 TallyMyGear;
