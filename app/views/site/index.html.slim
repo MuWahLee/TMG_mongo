@@ -22,3 +22,8 @@ main role="main" class="container"
             input type="submit" value="Sign In" class="btn btn-success"
             input type="submit" value="Register" class="btn btn-info"
 
+  ol
+    - @users.each do |some_user|
+      li
+        = some_user.email
+
