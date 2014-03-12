@@ -24,8 +24,12 @@ html lang="en"
   footer
     div id="footer" class="container"
       nav class="navbar navbar-default navbar-fixed-bottom" role="navigation"
+
         p class="row"
+        / p.text-muted.credit
           div class="navbar-inner navbar-content-center"
-            a href="privacy">Privacy Policy</a> &bull;
-            a href="terms-of-use">Terms of Use</a> &bull;
-            / &copy; 2014 TallyMyGear;
+            =link_to "privacy", privacy_url
+            | &bull;
+            =link_to "terms-of-use", terms_url
+            | &bull;
+            | &copy; 2014 TallyMyGear
