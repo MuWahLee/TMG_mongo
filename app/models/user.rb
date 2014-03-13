@@ -24,7 +24,7 @@ class User
   field :fish, type: String
 
   def encrypt_password
-    puts "Encrypting the password: #{self.password}"
+    # puts "Encrypting the password: #{self.password}"
     if password.present?
       self.salt = BCrypt::Engine.generate_salt
       self.fish = BCrypt::Engine.hash_secret(password, self.salt)
