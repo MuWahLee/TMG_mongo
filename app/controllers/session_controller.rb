@@ -3,7 +3,7 @@ class SessionController < ApplicationController
   def new
 
     # render text: "Display the log in form"
-    @messages = flash.map {| key, value| "#{key.capitalize}: #{value}"}.join(";")
+    # @messages = flash.map {| key, value| "#{key.capitalize}: #{value}"}.join(";")
   end
 
   def create
@@ -19,6 +19,7 @@ class SessionController < ApplicationController
     else
       # render text: "Who are you"
       # redirect_to login_url (same as "render :new")
+      flash.now[:alert] = "unable to log you in. Please check your email and password and try again."
       render :new
     end
 

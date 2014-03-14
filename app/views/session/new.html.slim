@@ -6,7 +6,7 @@ main role="main" class="container"
         fieldset
 
           legend Please Sign In
-          .form-group = @messages
+          .form-group = flash.map {| key, value| "#{key.capitalize}: #{value}"}.join(";")
 
           .form-group
             / div class="form-group"
