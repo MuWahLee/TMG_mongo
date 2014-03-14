@@ -79,6 +79,8 @@ h2.header {
 
 .form-group input.entry {
   color: black;
+  height: 35px;
+  width: 200px;
 
 }
 

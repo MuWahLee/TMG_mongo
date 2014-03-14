@@ -1,7 +1,8 @@
 class SessionController < ApplicationController
 
   def new
-    render text: "Display the log in form"
+
+    # render text: "Display the log in form"
   end
 
   def create
@@ -11,8 +12,9 @@ class SessionController < ApplicationController
     @user = User.authenticate(params[:user][:email], params[:user][:password])
 
     if @user
-      session[:user_id] = @user_id
+      session[:user_id] = @user.id
       render text: "Logged in #{@user.email}"
+      # redirect_to root_url
     else
       render text: "Who are you"
     end
@@ -22,6 +24,7 @@ class SessionController < ApplicationController
 
   def destroy
     render text: "log the user out"
+    session[:user_id] = nil
   end
 
 end

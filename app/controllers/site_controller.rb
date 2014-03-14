@@ -2,6 +2,7 @@ class SiteController < ApplicationController
 
   def index
     # @users = User.all.entries
+    # render text: is_authenticated?
   end
 
   def privacy
@@ -9,5 +10,7 @@ class SiteController < ApplicationController
 
   def terms
   end
+
+
 
 end
