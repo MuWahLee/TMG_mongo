@@ -4,6 +4,7 @@ class SessionController < ApplicationController
 
     # render text: "Display the log in form"
     # @messages = flash.map {| key, value| "#{key.capitalize}: #{value}"}.join(";")
+    redirect_to root_url, notice: "you are logged in." if current_user
   end
 
   def create
@@ -14,8 +15,9 @@ class SessionController < ApplicationController
 
     if @user
       session[:user_id] = @user.id
-      render text: "Logged in #{@user.email}"
-      # redirect_to root_url
+      # render text: "Logged in #{@user.email}"
+      redirect_to root_url
+
     else
       # render text: "Who are you"
       # redirect_to login_url (same as "render :new")
