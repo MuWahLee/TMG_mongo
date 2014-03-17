@@ -8,9 +8,22 @@
 
 User.destroy_all
 
+temp_password = "123"
+
 User.create([
-  {email: "mlee2569@hotmail.com"},
-  {email: "lee-mw@hotmail.com"},
-  {email: "mlee2569@gmail.com"},
+  {email: "mlee2569@hotmail.com",
+    password: temp_password,
+    password_confirmation: temp_password
+    },
+
+  {email: "lee-mw@hotmail.com",
+    password: temp_password,
+    password_confirmation: temp_password
+    },
+
+  {email: "mlee2569@gmail.com",
+    password: temp_password,
+    password_confirmation: temp_password
+    },
   ])
 
