@@ -6,7 +6,7 @@ class User
 
   attr_accessor :password, :password_confirmation
 
-  before_save :encrypt_password
+  before_save :set_random_password, :encrypt_password
   validates :email, presence: true, uniqueness: {case_sensitive: false}
 
   def self.authenticate(email, password)
