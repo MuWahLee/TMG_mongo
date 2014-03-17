@@ -11,13 +11,15 @@ class SessionController < ApplicationController
     # render text: "log the user in"
     # render text: "Log #{params[:user][:email]} in with #{params[:user][:password]}."
     # render text: User.authenticate(params[:user][:email], params[:user][:password]).email
-    @user = User.authenticate(params[:user][:email], params[:user][:password])
+    user = User.find_by(email: params[:user][:email])
+    password = params[:user][:password]
 
-    if @user
-      session[:user_id] = @user.id
+    if password.blank?
+      render text: "Time to reset password"
+    elsif user and user.authenticate(password)
+      session[:user_id] = user.id
       # render text: "Logged in #{@user.email}"
       redirect_to root_url
-
     else
       # render text: "Who are you"
       # redirect_to login_url (same as "render :new")

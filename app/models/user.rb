@@ -4,7 +4,13 @@ class User
   include Mongoid::Document
   include Mongoid::Timestamps
 
+
   attr_accessor :password, :password_confirmation
+
+
+  field :email, type: String
+  field :salt,  type: String
+  field :fish,  type: String
 
   before_save :set_random_password, :encrypt_password
   validates :email, presence: true, uniqueness: {case_sensitive: false}
@@ -26,11 +32,6 @@ class User
         self.fish = BCrypt::Engine.hash_secret(SecureRandom.base64(32), self.salt)
       end
     end
-
-
-  field :email, type: String
-  field :salt, type: String
-  field :fish, type: String
 
   def encrypt_password
     # puts "Encrypting the password: #{self.password}"
