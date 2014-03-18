@@ -26,7 +26,10 @@ class User
   end
 
   def self.find_by_code code
-    User.find_by({:code => code, :expires_at => {"$gte" => Time.now.gmtime}})
+    if user = User.find_by({:code => code, :expires_at => {"$gte" => Time.now.gmtime}})
+    user.set_expiration
+    end
+    user
   end
 
   def authenticate(password)
@@ -35,7 +38,7 @@ class User
 
   def set_password_reset
     self.code = SecureRandom.urlsafe_base64
-    self.set_expiration
+    set_expiration
   end
 
   def set_expiration
