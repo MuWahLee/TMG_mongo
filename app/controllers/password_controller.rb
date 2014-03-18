@@ -9,7 +9,7 @@ class PasswordController < ApplicationController
     @user = User.find_by code: params[:code]
 
     if @user
-
+    # if user is found
       if params[:user][:password].blank?
         @user.errors.add(:password, "This field can't be blank")
 
@@ -18,9 +18,12 @@ class PasswordController < ApplicationController
       else
         render text: "Failure"
       end
+
+    # otherwise show a message of not found
     else
         render text: "No code found"
     end
+
   end
 
   private
