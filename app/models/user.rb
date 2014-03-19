@@ -27,7 +27,7 @@ class User
 
   def self.find_by_code code
     if user = User.find_by({:code => code, :expires_at => {"$gte" => Time.now.gmtime}})
-    user.set_expiration
+      user.set_expiration
     end
     user
   end
@@ -45,6 +45,13 @@ class User
     self.expires_at = PASSWORD_RESET_EXPIRES.hours.from_now
     self.save!
   end
+
+  def reset_password(params)
+    if self.update_attributes(params)
+      self.update_attributes(params.merge( code: nil, expires_at: nil ))
+    end
+  end
+
 
   protected
 

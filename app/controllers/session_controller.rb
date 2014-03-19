@@ -1,44 +1,36 @@
 class SessionController < ApplicationController
 
-  def new
+  # skip_before_action :verify_authenticity_token
 
-    # render text: "Display the log in form"
+  def new
+    # @messages = flash.inspect
     # @messages = flash.map {| key, value| "#{key.capitalize}: #{value}"}.join(";")
-    redirect_to root_url, notice: "you are logged in." if current_user
+    # render text: "Display the log in form."
+    redirect_to root_url, notice: "You are logged in." if current_user
   end
 
   def create
-    # render text: "log the user in"
-    # render text: "Log #{params[:user][:email]} in with #{params[:user][:password]}."
-    # render text: User.authenticate(params[:user][:email], params[:user][:password]).email
-    user = User.find_by(email: params[:user][:email])
-    password = params[:user][:password]
-
-    if user and password.blank?
-      user.set_password_reset
-      UserNotifier.reset_password(user).deliver
-      flash.now[:notice] = "Password reset - We'll send you an email."
-      render :new
-      # render text: "Time to reset password"
-    elsif user and user.authenticate(password)
-      session[:user_id] = user.id
-      # render text: "Logged in #{@user.email}"
-      redirect_to root_url
+    if params[:user][:password].blank?
+      #password reset flow
+      PasswordResetter.new(flash).handle_reset_request(user_params)
     else
-      # render text: "Who are you"
-      # redirect_to login_url (same as "render :new")
-      flash.now[:alert] = "unable to log you in. Please check your email and password and try again."
-      render :new
+      #authenticate password flow
+      return if log_user_in( UserAuthenticator.new(session,flash).authenticate_user(user_params) )
     end
-
+    # (redirect_to root_url and return) if flash.empty?
+    render :new
   end
 
-
   def destroy
-    # render text: "log the user out"
-    session[:user_id] = nil
-    redirect_to login_url, notice: "You've successfully logged out."
+    log_user_out
+    # render text: "Log the user out."
+    # redirect_to login_url, notice: "You've successfully logged out."
+  end
 
+  private
+
+  def user_params
+    params.require(:user).permit(:email, :password)
   end
 
 end

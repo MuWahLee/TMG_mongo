@@ -21,7 +21,7 @@ html lang="en"
         h2 class="header" the place to weigh your gear
 
     == yield
-    == render partial: "layouts/messages"
+
 
   footer
     div id="footer" class="container"
@@ -35,3 +35,4 @@ html lang="en"
             = link_to "terms-of-use", terms_url
             | &bull;
             | &copy; 2014 TallyMyGear
+    == flash_noty_script_tag
