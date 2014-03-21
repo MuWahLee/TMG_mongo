@@ -4,6 +4,7 @@ class SiteController < ApplicationController
 
   def index
     @users = User.all.entries
+    # @product = Product.all.entries
     # render text: is_authenticated?
   end
 

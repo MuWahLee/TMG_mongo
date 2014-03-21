@@ -1,16 +1,29 @@
 class ProductController < ApplicationController
 
-  def view
+  def product_new
+    # this is our form
   end
 
-  def add
+  def product_create
+    # make it save here
+    Product.create product_params
+    redirect_to product_url
   end
 
-  def modify
+
+  def product_read
+    @products = Product.all.entries
   end
 
-  def delete
+  def product_update
   end
 
+  def product_delete
+  end
+
+
+def product_params
+  params.require(:product).permit(:product_name, :product_weight, :product_calories)
+end
 
 end
