@@ -2,6 +2,8 @@ class Product
 
   include Mongoid::Document
   include Mongoid::Timestamps
+  embedded_in :user
+
 
   field :product_name,      type: String
   field :product_weight,    type: Integer
