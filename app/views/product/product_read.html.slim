@@ -11,5 +11,8 @@ div class="Products_list"
         th = "Product Calories"
         th = "Select Item"
     tbody
-      tr
-
+      - for item in @products
+        tr
+          td = item.product_name
+          td = item.product_weight
+          td = item.product_calories
