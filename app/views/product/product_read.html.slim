@@ -2,10 +2,14 @@ p
   = @products.inspect
 
 
-<table border=1>
-  <tr>
-    <th> Product Name </th>
-    <th> Product Weight </th>
-    <th> Product Calories </th>
-  </tr>
-</table>
+div class="Products_list"
+  table class="table table-bordered"
+    thead
+      tr
+        th = "Product Name"
+        th = "Product Weight"
+        th = "Product Calories"
+        th = "Select Item"
+    tbody
+      tr
+

@@ -7,19 +7,22 @@ TallyMyGear::Application.routes.draw do
   delete  'logout'  => 'session#destroy'
   get     'logout'  => 'session#destroy' #TODO: remove before deployment
 
+  get     'register'  =>  'register#new_user'
+  post    'register'  =>  'register#register'
+
   get     'privacy' => 'site#privacy'
-  get     'terms' => 'site#terms'
+  get     'terms'   => 'site#terms'
 
   get     'reset/:code' => 'password#edit', as: :reset
   put     'reset/:code' => 'password#update'
   patch   'reset/:code' => 'password#update'
 
 
-  post    'product' =>  'product#product_create'
-  get     'product' =>  'product#product_read'
+  post    'product'     =>  'product#product_create'
+  get     'product'     =>  'product#product_read'
   get     'product/new' =>  'product#product_new'
 
-  post    'product' =>  'product#product_update'
-  delete  'product' =>  'product#product_delete'
+  post    'product'     =>  'product#product_update'
+  delete  'product'     =>  'product#product_delete'
 
 end
