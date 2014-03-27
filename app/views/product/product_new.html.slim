@@ -2,29 +2,29 @@
 
 main role="form"
   form class="form-horizontal"
-  div class="form-group"
+    div class="form-group"
 
-    = form_for :product, url: product_url, html: { id: "productform"} do |f|
-      fieldset
+      = form_for :product, url: product_url, html: { id: "productform"} do |f|
+        fieldset
 
-        legend Product Details
-        p Add in your own gear's details here, then click on Add product.
+          legend Product Details
+          p Add in your own gear's details here, then click on Add product.
 
-        .form-group
-          = f.label :product_name, class: "sr-only"
-          = f.text_field :product_name, class: "form-control" ,placeholder: "Product name"
+          .form-group
+            = f.label :product_name, class: "sr-only"
+            = f.text_field :product_name, class: "form-control" ,placeholder: "Product name"
 
-        .form-group
-          = f.label :product_weight, class: "sr-only"
-          = f.text_field :product_weight, class: "form-control", placeholder: "Product weight (in grams)."
+          .form-group
+            = f.label :product_weight, class: "sr-only"
+            = f.text_field :product_weight, class: "form-control", placeholder: "Product weight (in grams)."
 
-        .form-group
-          = f.label :product_calories, class: "sr-only"
-          = f.text_field :product_calories, class: "form-control" ,placeholder: "Product calories (in calories)."
+          .form-group
+            = f.label :product_calories, class: "sr-only"
+            = f.text_field :product_calories, class: "form-control" ,placeholder: "Product calories (in calories)."
 
-        / .form-group
-        /   = f.label :product_image, class: "sr-only"
-        /   = f.text_field :product_image, class: "form-control" ,placeholder: "Product image"
+          / .form-group
+          /   = f.label :product_image, class: "sr-only"
+          /   = f.text_field :product_image, class: "form-control" ,placeholder: "Product image"
 
-        .form-group
-          = f.submit "Add product", class: "btn btn-success"
+          .form-group
+            = f.submit "Add product", class: "btn btn-success"

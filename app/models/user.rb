@@ -5,7 +5,7 @@ PASSWORD_RESET_EXPIRES = 4
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
-  has_many :products
+  has_and_belongs_to_many :products, inverse_of: nil
 
   attr_accessor :password, :password_confirmation
 

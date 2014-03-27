@@ -2,12 +2,12 @@ class Product
 
   include Mongoid::Document
   include Mongoid::Timestamps
-  belongs_to :user
+
 
 
   field :product_name,      type: String
   field :product_weight,    type: Integer
-  field :product_calories,  type: Integer
+  field :product_calories,  type: Integer, default: 0
 
 
   # validates :product_name, presence: true, uniqueness: {case_sensitive: false}

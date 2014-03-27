@@ -1,18 +1,26 @@
-p
-  = @products.inspect
+/ p
+/   = @products.inspect
 
 
-div class="Products_list"
+div class="All_Products_list"
+  h1 All Gear
+  p Click on the checkboxes to select your gear
   table class="table table-bordered"
     thead
       tr
         th = "Product Name"
-        th = "Product Weight"
-        th = "Product Calories"
+        / th.col.md-4 Product Name
+        th = "Product Weight (in grams)"
+        / th.col.md-1 Product Weight
+        th = "Product Calories (in calories)"
+        / th.col.md-1 Product Calories
         th = "Select Item"
+        / th.col-md-1 Select Item
     tbody
       - for item in @products
         tr
           td = item.product_name
           td = item.product_weight
           td = item.product_calories
+          td.select_item
+            <input type="checkbox"

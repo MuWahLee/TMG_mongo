@@ -1,0 +1,19 @@
+div class="My_Gear_list"
+  h1 My Gear List
+  table class="table table-bordered"
+    thead
+      tr
+        th = "Product Name"
+        / th.col.md-4 Product Name
+        th = "Product Weight"
+        / th.col.md-1 Product Weight
+        th = "Product Calories"
+        / th.col.md-1 Product Calories
+        th = "Select Item"
+        / th.col-md-1 Select Item
+    tbody
+      / - for item in @products
+      /   tr
+      /     td = item.product_name
+      /     td = item.product_weight
+      /     td = item.product_calories
