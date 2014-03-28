@@ -1,9 +1,7 @@
 p
   | welcome hey hey #{@current_user.email}
 
-
-    <table class="table table-bordered">
-
-
-
-    </table>
+p
+  = link_to "products", product_url
+  ' |
+  = link_to "new product", product_new_url
