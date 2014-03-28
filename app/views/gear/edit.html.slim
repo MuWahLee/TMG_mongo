@@ -1,0 +1,24 @@
+= form_for (current_user), url: gear_form_url, method: :patch do |f|
+
+  / div class="All_Products_list"
+  h1 List My Gear
+  table.table.table-bordered
+    / p Click on the checkboxes to select your gear
+    / table class="table table-bordered"
+    thead
+      tr
+        th = "Include?"
+        th = "Product Name"
+        th = "Product Weight (in grams)"
+        th = "Product Calories (in calories)"
+
+    tbody
+      = f.collection_check_boxes :product_ids, @products, :id, :product_name do |b|
+        - product = b.instance_variable_get(:@object)
+        tr
+          td = b.check_box
+          td = product.product_name
+          td = product.product_weight
+          td = product.product_calories
+  = f.submit class:"btn btn-warning"
+
