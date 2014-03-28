@@ -28,7 +28,7 @@ TallyMyGear::Application.routes.draw do
 
   delete  'product'     =>  'product#product_delete'
 
-  get     'gear'  =>  'gear#edit', as: :gear_form
-  patch   'gear'  =>  'gear#update', as: :update_gear
+  get     'gear'  =>  'gear#edit',    as: :gear_form
+  patch   'gear'  =>  'gear#update',  as: :update_gear
 
 end

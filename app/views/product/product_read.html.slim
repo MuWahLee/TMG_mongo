@@ -3,8 +3,8 @@
 
 
 div class="All_Products_list"
-  h1 All Gear
-  p Click on the checkboxes to select your gear
+  h3.header All Gear
+  / p Click on the checkboxes to select your gear
   table class="table table-bordered"
     thead
       tr
@@ -14,7 +14,7 @@ div class="All_Products_list"
         / th.col.md-1 Product Weight
         th = "Product Calories (in calories)"
         / th.col.md-1 Product Calories
-        th = "Select Item"
+        / th = "Select Item"
         / th.col-md-1 Select Item
     tbody
       - for item in @products
@@ -22,5 +22,6 @@ div class="All_Products_list"
           td = item.product_name
           td = item.product_weight
           td = item.product_calories
-          td.select_item
-            <input type="checkbox"
+          / td.select_item
+          /   <input type="checkbox"
+          / tr = @products.sum(:product_weight)

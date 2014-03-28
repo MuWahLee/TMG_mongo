@@ -13,7 +13,7 @@ class ProductController < ApplicationController
     @product = Product.new ( product_params )
 
     if @product.save
-      redirect_to product_url ( @product )
+      redirect_to gear_form_url ( @product )
     else
       flash.now[:alert] = @product.errors
       render :product_new

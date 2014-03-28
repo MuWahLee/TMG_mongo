@@ -12,9 +12,18 @@
  *= require_tree .
  */
 
-.navbar-static-top {
+.navbar-fixed-top {
   background-color: hsla(0, 0%, 0%, 0);
-  min-height: 1px;
+  min-height: 50px;
+  padding-top: 10px;
+}
+
+.pull_center {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom:0px;
+  float: center;
+
 }
 
 .pull_right {
@@ -38,6 +47,12 @@ html, body {
   margin-top: 10px;*/
 }
 
+.links {
+  padding-top: 125px;
+  font-color: hsla(360, 77%, 0%, 1);
+}
+
+
 fieldset {
   padding: 20px;
   margin: 0px;
@@ -47,7 +62,6 @@ fieldset {
 }
 
 .container {
-  margin-top: 0px;
   border-bottom: 50px
 
 }
@@ -56,7 +70,8 @@ legend {
   font-size: 18px;
   color: hsla(360, 84%, 98%, 1);
   margin-bottom: 10px;
-  padding-top: 50px;
+  padding-top: 100px;
+  border-bottom: 0px;
 
 }
 
@@ -78,12 +93,17 @@ h2.header {
   color: hsla(360, 84%, 98%, 1);
   margin-top: 0px;
   margin-bottom: 0px;
-
 }
 /*
 .form-horizontal{
   padding: 20px;
 }*/
+
+h3.header {
+  font-size: 19px;
+
+}
+
 
 .form-group {
   color: hsla(360, 84%, 98%, 1);
@@ -101,6 +121,49 @@ h2.header {
   width: 200px;
 }*/
 
+.All_Products_list {
+  padding-top: 75px;
+  font-size: 16px;
+}
+
+.image_layer {
+  background-color: hsla(360, 100%, 100%, 0.21);
+  height: 100%;
+}
+
+table {
+        width: 100%;
+    }
+
+thead, tbody, tr, td, th { display: block; }
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 30px;
+
+    /*text-align: left;*/
+}
+
+tbody {
+    height: 300px;
+    overflow-y: auto;
+}
+
+thead {
+/*     fallback */
+}
+
+
+tbody td, thead th {
+    width: 25%;
+    float: left;
+  }
 
 .navbar-fixed-bottom {
   text-align: center;
