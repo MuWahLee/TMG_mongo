@@ -17,12 +17,15 @@ TallyMyGear::Application.routes.draw do
   put     'reset/:code' => 'password#update'
   patch   'reset/:code' => 'password#update'
 
-
-  post    'product'     =>  'product#product_create'
-  get     'product'     =>  'product#product_read'
   get     'product/new' =>  'product#product_new'
+  post    'product'     =>  'product#product_create'
 
+  get     'product'     =>  'product#product_read'
+  get     'product/show'=>  'product#product_show'
+
+  get     'product'     =>  'product#product_edit'
   post    'product'     =>  'product#product_update'
-  delete  'product'     =>  'product#product_destroy'
+
+  delete  'product'     =>  'product#product_delete'
 
 end
