@@ -1,6 +1,6 @@
-main role="main" class="container"
-  div class="row"
-    div class="col-md-12 col-md-offset"
+main.container role="main"
+  .row
+    .col-md-4
 
       = form_for :user, url: login_url, html: { id: "loginform"} do |f|
         fieldset
@@ -13,7 +13,7 @@ main role="main" class="container"
             / label for="user_email" class="input-group input-group-lg" Email
             = f.label :email, class: "input-group input-group-lg"
             / input type="text" id="user_email" name="user[email]" placeholder="Email Address"
-            = f.text_field :email, class: "entry" ,placeholder: "Email Address"
+            = f.text_field :email, class: "form-control" ,placeholder: "Email Address"
 
 
           .form-group
@@ -21,7 +21,7 @@ main role="main" class="container"
             / label for="user_password" class="input-group input-group-lg" Password
             = f.label :user_password, class: "input-group input-group-lg"
             / input type="password" id="user_password" name="user[password]" placeholder="Password"
-            = f.password_field :password, class: "entry", placeholder: "Password"
+            = f.password_field :password, class: "form-control", placeholder: "Password"
 
 
           .form-group
