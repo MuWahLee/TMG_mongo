@@ -7,18 +7,18 @@
       / table class="table table-bordered"
       thead
         tr
-          th = "Include?"
-          th = "Product Name"
-          th = "Product Weight (in grams)"
-          th = "Product Calories (in calories)"
+          th.th_6 = "Include?"
+          th.th_1 = "Product Name"
+          th.th_2 = "Product Weight (in grams)"
+          th.th_3 = "Product Calories (in calories)"
 
       tbody
         = f.collection_check_boxes :product_ids, @products, :id, :product_name do |b|
           - product = b.instance_variable_get(:@object)
           tr
-            td = b.check_box
-            td = product.product_name
-            td = product.product_weight
-            td = product.product_calories
+            td.td_6 = b.check_box
+            td.td_1 = product.product_name
+            td.td_2 = product.product_weight
+            td.td_3 = product.product_calories
     = f.submit "Save my list", class:"btn btn-warning"
 

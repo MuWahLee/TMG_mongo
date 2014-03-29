@@ -21,7 +21,7 @@ p.links
   =link_to "all products", product_url
 
 .show_item
-  h3.header show
+  h3.header Display item
   table class="table table-bordered"
     thead
       tr
@@ -29,14 +29,14 @@ p.links
         th.th_2 Product Weight (in grams)
         th.th_3 Product Calories (in calories)
         th.th_4 Action
-        th.th_5
+        th.th_4
 
     tbody
       / - for item in @products
       tr
-        td = @product_name
-        td = @product_weight
-        td = @product_calories
-        td = link_to "edit", product_url(@product)
-        td = link_to "delete", product_url(@product), method: :delete,
+        td.td_1 => @product_name
+        td.td_2 => @product_weight
+        td.td_3 => @product_calories
+        td.td_4 = link_to "edit", product_url(@product)
+        td.td_4 = link_to "delete", product_url(@product), method: :delete,
           confirm: "are you sure you want to delete this item?"

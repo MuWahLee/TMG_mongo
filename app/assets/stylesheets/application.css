@@ -94,10 +94,11 @@ h2.header {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-/*
-.form-horizontal{
-  padding: 20px;
-}*/
+
+    /*
+    .form-horizontal{
+      padding: 20px;
+    }*/
 
 h3.header {
   font-size: 19px;
@@ -126,16 +127,19 @@ h3.header {
   font-size: 16px;
 }
 
-.image_layer {
+/*.image_layer {
   background-color: hsla(360, 100%, 100%, 0.21);
   height: 100%;
-}
+}*/
 
 table {
-        width: 100%;
+  width: 100%;
     }
 
-thead, tbody, tr, td, th { display: block; }
+thead, tbody, tr, td, th {
+  display: block;
+  background-color: hsla(0, 100%, 100%, 0.54);
+}
 
 tr:after {
     content: ' ';
@@ -145,14 +149,14 @@ tr:after {
 }
 
 thead th {
-    height: 30px;
-
+  height: 50px;
+  font-size: 16px;
     /*text-align: left;*/
 }
 
 tbody {
-    height: 300px;
-    overflow-y: auto;
+  height: 320px;
+  overflow-y: auto;
 }
 
 thead {
@@ -161,11 +165,50 @@ thead {
 
 
 tbody td, thead th {
-    width: 25%;
-    float: left;
+  float: left;
   }
+
+.th_1, .td_1 {
+  width: 500px;
+  min-height: 37px;
+}
+
+.th_2, .td_2 {
+  width: 150px;
+  min-height: 37px;
+}
+
+.th_3, .td_3 {
+  width: 150px;
+  min-height: 37px;
+}
+
+.th_2, .th_3 {
+  text-align: center;
+}
+
+.td_2, .td_3 {
+  text-align: right;
+
+}
+
+.th_4, .td_4 {
+  width: 100px;
+  min-height: 37px;
+  text-align: center;
+}
+
+
+.th_6, .td_6 {
+  width: 80px;
+  text-align: center;
+  min-height: 37px;
+}
+
+/*** FOOTER ***/
 
 .navbar-fixed-bottom {
   text-align: center;
   height: 10px;
 }
+
