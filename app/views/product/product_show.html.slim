@@ -1,18 +1,42 @@
-/ shows an object. "product_read.html.slim" shows list of products.
+/ / shows an object. "product_read.html.slim" shows list of products.
+
+/ p.links
+/   =link_to "all products", product_url
+
+/ h1 = @product.product_name
+
+/ ul
+/   li => @product.product_weight
+/   ' grams
+
+/   li => @product.product_calories
+/   ' calories
+
+/   li = link_to "edit", product_url(@product)
+
+  / li = link_to "delete", product_url(@product), method: :delete,
+  /   confirm: "are you sure you want to delete this item?"
 
 p.links
   =link_to "all products", product_url
 
-h1 = @product.product_name
+.show_item
+  h3.header show
+  table class="table table-bordered"
+    thead
+      tr
+        th.th_1 Product name
+        th.th_2 Product Weight (in grams)
+        th.th_3 Product Calories (in calories)
+        th.th_4 Action
+        th.th_5
 
-ul
-  li => @product.product_weight
-  ' grams
-
-  li => @product.product_calories
-  ' calories
-
-  li = link_to "edit", product_url(@product)
-
-  li = link_to "delete", product_url(@product), method: :delete,
-    confirm: "are you sure you want to delete this item?"
+    tbody
+      / - for item in @products
+      tr
+        td = @product_name
+        td = @product_weight
+        td = @product_calories
+        td = link_to "edit", product_url(@product)
+        td = link_to "delete", product_url(@product), method: :delete,
+          confirm: "are you sure you want to delete this item?"
