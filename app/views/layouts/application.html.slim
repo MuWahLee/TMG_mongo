@@ -26,6 +26,18 @@ html lang="en"
             / h1 class="header" Tally My Gear
             h1.header Tally My Gear
             h2 class="header" the place to weigh your gear
+            p.links
+              => link_to "My gear", gear_form_url
+              ' |
+              => link_to "all products", product_url
+              ' |
+              => link_to "new product", product_new_url
+              ' |
+              => link_to "show product", product_show_url
+              ' |
+
+              => link_to "delete", product_url(@product), method: :delete,
+                confirm: "are you sure you want to delete this product?"
 
         == yield
 

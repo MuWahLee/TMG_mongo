@@ -12,33 +12,42 @@
  *= require_tree .
  */
 
+
+/*** Navbar ***/
+
 .navbar-fixed-top {
   background-color: hsla(0, 0%, 0%, 0);
-  min-height: 50px;
-  padding-top: 10px;
+  min-height:       50px;
+  padding-top:      10px;
 }
 
-.pull_center {
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom:0px;
-  float: center;
-
+.welcome {
+  text-align:       right;
+  margin-top:       -30px;
+  margin-bottom:    0px;
+  float:            right;
+  color:            hsla(210, 67%, 48%, 1);
+  font-size:        15px;
+  font-weight:      bold;
 }
 
 .pull_right {
-  text-align: right;
-  margin-top: 10px;
-  float: right;
+  text-align:       right;
+  margin-top:       5px;
+  float:            right;
 }
 
-html, body {
+/*** body ***/
 
-  font-family: Verdana, Helvetica, Arial, sans-serif;
-  background: url(Trailrun_Camp_KlausFengler.jpg) no-repeat center center fixed;
-  font-color: white;
-  background-size: cover;
-  height: 100%;
+body {
+
+  font-family:      Verdana, Helvetica, Arial, sans-serif;
+  background:       url(Trailrun_Camp_KlausFengler.jpg) no-repeat center center fixed;
+  font-color:       white;
+  background-size:  cover;
+  height:           100%;
+  font-style:       italic;
+  padding-top:      117px;
 
 /*  background-position: right;
   background-repeat: no-repeat;
@@ -48,51 +57,53 @@ html, body {
 }
 
 .links {
-  padding-top: 125px;
-  font-color: hsla(360, 77%, 0%, 1);
+  padding-top:      30px;
+  font-color:       hsla(249, 65%, 48%, 1);
 }
 
 
 fieldset {
-  padding: 20px;
-  margin: 0px;
-  border-top: 0px;
-  min-width: 0px;
-
+  padding:          20px;
+  margin:            0px;
+  border-top:        0px;
+  min-width:         0px;
 }
 
 .container {
-  border-bottom: 50px
+  border-bottom:     50px
 
 }
 
 legend {
-  font-size: 18px;
-  color: hsla(360, 84%, 98%, 1);
-  margin-bottom: 10px;
-  padding-top: 100px;
-  border-bottom: 0px;
+  /*font-size:        18px;*/
+  color:            hsla(360, 84%, 98%, 1);
+  margin-bottom:    10px;
+  padding-top:      50px;
+  border-bottom:      0px;
+}
 
+.own_detail {
+  color:            hsla(360, 84%, 98%, 1);
 }
 
 h1.header {
 
-  font-style: italic;
-  font-weight: bold;
-  font-size: 50px;
-  color: hsla(360, 84%, 98%, 1);
-  margin-top: 0px;
-  margin-bottom: 0px;
+  font-style:       italic;
+  font-weight:      bold;
+ /* font-size:        50px;*/
+  color:            hsla(360, 84%, 98%, 1);
+  margin-top:       0px;
+  margin-bottom:    0px;
 
 }
 
 h2.header {
-  font-style: italic;
-  font-weight: normal;
-  font-size: 20px;
-  color: hsla(360, 84%, 98%, 1);
-  margin-top: 0px;
-  margin-bottom: 0px;
+  font-style:       italic;
+  font-weight:      normal;
+  font-size:        20px;
+  color:            hsla(360, 84%, 98%, 1);
+  margin-top:       0px;
+  margin-bottom:    0px;
 }
 
     /*
@@ -101,19 +112,22 @@ h2.header {
     }*/
 
 h3.header {
-  font-size: 19px;
+  font-size:        20px;
+  color:            hsla(360, 84%, 98%, 1);
+  text-align:       center;
+  font-weight:      bold;
 
 }
 
 
 .form-group {
-  color: hsla(360, 84%, 98%, 1);
+  color:            hsla(360, 84%, 98%, 1);
 }
 
 .form-group input.entry {
-  color: black;
-  height: 35px;
-  width: 200px;
+  color:            black;
+  height:           35px;
+  width:            200px;
 }
 
 /*.form-control input.entry {
@@ -122,9 +136,9 @@ h3.header {
   width: 200px;
 }*/
 
-.All_Products_list {
-  padding-top: 75px;
-  font-size: 16px;
+/*.All_Products_list {
+  padding-top:      75px;*/
+  /*font-size:        16px;*/
 }
 
 /*.image_layer {
@@ -132,31 +146,34 @@ h3.header {
   height: 100%;
 }*/
 
+
+/*** table formatting ***/
+
 table {
-  width: 100%;
+  width:            100%;
     }
 
 thead, tbody, tr, td, th {
-  display: block;
-  background-color: hsla(0, 100%, 100%, 0.54);
+  display:          block;
+  background-color: hsla(0, 100%, 100%, 0.35);
 }
 
 tr:after {
-    content: ' ';
-    display: block;
-    visibility: hidden;
-    clear: both;
+    content:        ' ';
+    display:        block;
+    visibility:     hidden;
+    clear:          both;
 }
 
 thead th {
-  height: 50px;
-  font-size: 16px;
+  height:           50px;
+  font-size:        16px;
     /*text-align: left;*/
 }
 
 tbody {
-  height: 320px;
-  overflow-y: auto;
+  height:           250px;
+  overflow-y:       auto;
 }
 
 thead {
@@ -165,53 +182,57 @@ thead {
 
 
 tbody td, thead th, tfoot th {
-  float: left;
+  float:            left;
   }
 
 .th_1, .td_1 {
-  width: 500px;
-  min-height: 37px;
+  width:          535px;
+  min-height:       25px;
 }
 
 .th_2, .td_2 {
-  width: 150px;
-  min-height: 37px;
+  width:            150px;
+  min-height:       25px;
 }
 
 .th_3, .td_3 {
-  width: 150px;
-  min-height: 37px;
+  width:             150px;
+  min-height:        25px;
 }
 
 .th_2, .th_3 {
-  text-align: center;
+  text-align:        center;
 }
 
 .td_2, .td_3 {
-  text-align: right;
-
+  text-align:        right;
 }
 
 .th_4, .td_4 {
-  width: 100px;
-  min-height: 37px;
-  text-align: center;
+  width:             100px;
+  min-height:        25px;
+  text-align:        center;
 }
 
 
 .th_6, .td_6 {
-  width: 80px;
-  text-align: center;
-  min-height: 37px;
+  width:             65px;
+  text-align:        center;
+  min-height:        25px;
 }
 
 .th_7 {
-  width: 580px;
+  width:              600px;
 }
+
+tbody tr:hover {
+  background:         hsla(62, 94%, 69%, 1);
+}
+
 /*** FOOTER ***/
 
 .navbar-fixed-bottom {
-  text-align: center;
-  height: 10px;
+  text-align:         center;
+  height:             10px;
 }
 

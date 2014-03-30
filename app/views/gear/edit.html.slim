@@ -1,13 +1,13 @@
 = form_for (current_user), url: gear_form_url, method: :patch do |f|
 
   div class="All_Products_list"
-    h3.header List My Gear
+    h3.header Select my gear
     table.table.table-bordered
       / p Click on the checkboxes to select your gear
       / table class="table table-bordered"
       thead
         tr
-          th.th_6 = "Include?"
+          th.th_6 = "Select"
           th.th_1 = "Product Name"
           th.th_2 = "Product Weight (in grams)"
           th.th_3 = "Product Calories (in calories)"

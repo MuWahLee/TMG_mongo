@@ -23,8 +23,8 @@ TallyMyGear::Application.routes.draw do
   get     'product'     =>  'product#product_index'
   get     'product/show'=>  'product#product_show'
 
-  get     'product/edit'     =>  'product#product_edit'
-  post    'product'     =>  'product#product_update'
+  get     'product/edit' => 'product#product_edit'
+  patch   'product'     =>  'product#product_update'
 
   delete  'product'     =>  'product#product_delete'
 

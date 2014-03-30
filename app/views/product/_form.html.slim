@@ -8,7 +8,7 @@ main.container role="main"
       fieldset
 
         legend Product Details
-        p Add in your own gear's details here, then click on Add product.
+        p.own_detail Add in your own gear's details here, then click on Save product.
 
         .form-group
           = f.label :product_name, class: "input-group input-group-lg"
@@ -27,4 +27,4 @@ main.container role="main"
         /   = f.text_field :product_image, class: "form-control" ,placeholder: "Product image"
 
         .form-group
-          = f.submit "Add product", class: "btn btn-success"
+          = f.submit class: "btn btn-success"

@@ -1,11 +1,11 @@
 class ProductController < ApplicationController
 
   before_action :is_authenticated?
-  before_action :get_product, except: [:product_read, :product_new, :product_create]
+  before_action :get_product, except: [ :product_index, :product_new, :product_create ]
 
   def product_new
     # this is our form
-    render :product_new
+    @product = Product.new
   end
 
   def product_create
