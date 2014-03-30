@@ -20,10 +20,10 @@ TallyMyGear::Application.routes.draw do
   get     'product/new' =>  'product#product_new'
   post    'product'     =>  'product#product_create'
 
-  get     'product'     =>  'product#product_read'
+  get     'product'     =>  'product#product_index'
   get     'product/show'=>  'product#product_show'
 
-  get     'product'     =>  'product#product_edit'
+  get     'product/edit'     =>  'product#product_edit'
   post    'product'     =>  'product#product_update'
 
   delete  'product'     =>  'product#product_delete'

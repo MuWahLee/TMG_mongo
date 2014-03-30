@@ -21,7 +21,7 @@ class ProductController < ApplicationController
   end
 
 
-  def product_read
+  def product_index
     @products = Product.all.entries
   end
 
