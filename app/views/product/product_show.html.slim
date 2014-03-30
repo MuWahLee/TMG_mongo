@@ -18,7 +18,7 @@
   /   confirm: "are you sure you want to delete this item?"
 
 p.links
-  =link_to "all products", product_url
+  = link_to "all products", product_url
 
 .show_item
   h3.header Display item
@@ -34,9 +34,9 @@ p.links
     tbody
       / - for item in @products
       tr
-        td.td_1 => @product_name
-        td.td_2 => @product_weight
-        td.td_3 => @product_calories
-        td.td_4 = link_to "edit", product_url(@product)
+        td.td_1 => @product.product_name
+        td.td_2 => @product.product_weight
+        td.td_3 => @product.product_calories
+        td.td_4 = link_to "edit", product_edit_url(@product)
         td.td_4 = link_to "delete", product_url(@product), method: :delete,
           confirm: "are you sure you want to delete this item?"

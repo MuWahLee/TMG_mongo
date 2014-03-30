@@ -164,7 +164,7 @@ thead {
 }
 
 
-tbody td, thead th {
+tbody td, thead th, tfoot th {
   float: left;
   }
 
@@ -205,6 +205,9 @@ tbody td, thead th {
   min-height: 37px;
 }
 
+.th_7 {
+  width: 580px;
+}
 /*** FOOTER ***/
 
 .navbar-fixed-bottom {

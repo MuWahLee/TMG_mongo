@@ -11,7 +11,11 @@
           th.th_1 = "Product Name"
           th.th_2 = "Product Weight (in grams)"
           th.th_3 = "Product Calories (in calories)"
-
+      tfoot
+        tr
+          th.th_7 = "Tally My Gear - Totals"
+          th.th_2 = "total weight"
+          th.th_3 = "total calories"
       tbody
         = f.collection_check_boxes :product_ids, @products, :id, :product_name do |b|
           - product = b.instance_variable_get(:@object)

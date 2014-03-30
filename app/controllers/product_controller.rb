@@ -26,6 +26,7 @@ class ProductController < ApplicationController
   end
 
   def product_show
+    # @product = Product.find(params[:id])
   end
 
   def product_edit
@@ -40,9 +41,9 @@ class ProductController < ApplicationController
     end
   end
 
-  def product_destroy
+  def product_delete
     @product.destroy
-    redirect_to product_url, notice: "Deleted #{@product.name}."
+    redirect_to product_url, notice: "Deleted #{@product.product_name}."
   end
 
 
