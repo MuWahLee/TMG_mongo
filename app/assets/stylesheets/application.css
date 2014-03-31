@@ -16,7 +16,7 @@
 /*** Navbar ***/
 
 .navbar-fixed-top {
-  background-color: hsla(0, 0%, 0%, 0);
+  background-color: hsla(0, 0%, 0%, 0.6);
   min-height:       50px;
   padding-top:      10px;
 }
@@ -43,35 +43,33 @@ body {
 
   font-family:      Verdana, Helvetica, Arial, sans-serif;
   background:       url(Trailrun_Camp_KlausFengler.jpg) no-repeat center center fixed;
-  font-color:       white;
+/*  font-color:       white;*/
   background-size:  cover;
   height:           100%;
   font-style:       italic;
   padding-top:      117px;
-
-/*  background-position: right;
-  background-repeat: no-repeat;
-  background-size:  contain;
-  margin: 50px !important;
-  margin-top: 10px;*/
 }
 
 .links {
-  padding-top:      30px;
+  padding-top:      10px;
   font-color:       hsla(249, 65%, 48%, 1);
 }
 
 
 fieldset {
-  padding:          20px;
+  padding:           0px;
   margin:            0px;
   border-top:        0px;
   min-width:         0px;
 }
 
-.container {
-  border-bottom:     50px
+.col-md-5 {
+  padding-left:     0px;
+}
 
+.container {
+  border-bottom:     50px;
+  padding-left:      50px;
 }
 
 legend {
@@ -85,6 +83,7 @@ legend {
 .own_detail {
   color:            hsla(360, 84%, 98%, 1);
 }
+
 
 h1.header {
 
@@ -106,48 +105,29 @@ h2.header {
   margin-bottom:    0px;
 }
 
-    /*
-    .form-horizontal{
-      padding: 20px;
-    }*/
 
 h3.header {
   font-size:        20px;
   color:            hsla(360, 84%, 98%, 1);
-  text-align:       center;
   font-weight:      bold;
-
+  margin-top:        5px;
 }
 
 
 .form-group {
   color:            hsla(360, 84%, 98%, 1);
+  margin-left:      0px;
 }
 
 .form-group input.entry {
   color:            black;
-  height:           35px;
+  height:            35px;
   width:            200px;
 }
 
-/*.form-control input.entry {
-  color: black;
-  height: 35px;
-  width: 200px;
-}*/
-
-/*.All_Products_list {
-  padding-top:      75px;*/
-  /*font-size:        16px;*/
-}
-
-/*.image_layer {
-  background-color: hsla(360, 100%, 100%, 0.21);
-  height: 100%;
-}*/
-
-
 /*** table formatting ***/
+
+
 
 table {
   width:            100%;
@@ -155,7 +135,11 @@ table {
 
 thead, tbody, tr, td, th {
   display:          block;
-  background-color: hsla(0, 100%, 100%, 0.35);
+  background-color: hsla(0, 100%, 100%, 0.28);
+}
+
+tfoot {
+  background-color: hsla(0, 100%, 100%, 0.28);
 }
 
 tr:after {
@@ -166,13 +150,17 @@ tr:after {
 }
 
 thead th {
-  height:           50px;
+  height:           51px;
   font-size:        16px;
-    /*text-align: left;*/
+/*  text-align:       center;*/
+  }
+
+tfoot {
+  font-size:        16px;
 }
 
 tbody {
-  height:           250px;
+  height:           325px;
   overflow-y:       auto;
 }
 
@@ -182,22 +170,28 @@ thead {
 
 
 tbody td, thead th, tfoot th {
-  float:            left;
+  float:                left;
+  font-weight:          bold;
+  border-left-style:    double;
+  border-top-style:     double;
+  border-right-style:   double;
+  border-bottom-style:  double;
   }
 
+
 .th_1, .td_1 {
-  width:          535px;
-  min-height:       25px;
+  width:            535px;
+  min-height:       27px;
 }
 
 .th_2, .td_2 {
   width:            150px;
-  min-height:       25px;
+  min-height:       27px;
 }
 
 .th_3, .td_3 {
   width:             150px;
-  min-height:        25px;
+  min-height:        27px;
 }
 
 .th_2, .th_3 {
@@ -210,15 +204,15 @@ tbody td, thead th, tfoot th {
 
 .th_4, .td_4 {
   width:             100px;
-  min-height:        25px;
   text-align:        center;
+  min-height:        27px;
 }
 
 
 .th_6, .td_6 {
   width:             65px;
   text-align:        center;
-  min-height:        25px;
+  min-height:        27px;
 }
 
 .th_7 {
@@ -229,10 +223,13 @@ tbody tr:hover {
   background:         hsla(62, 94%, 69%, 1);
 }
 
+
 /*** FOOTER ***/
 
 .navbar-fixed-bottom {
   text-align:         center;
   height:             10px;
+  background-color: hsla(0, 0%, 0%, 0.6);
+  color:            hsla(360, 84%, 98%, 1);
 }
 

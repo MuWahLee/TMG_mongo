@@ -29,15 +29,19 @@ html lang="en"
             p.links
               => link_to "My gear", gear_form_url
               ' |
-              => link_to "all products", product_url
+              => link_to "All products", product_url
               ' |
-              => link_to "new product", product_new_url
+              => link_to "New product", product_new_url
               ' |
-              => link_to "show product", product_show_url
+              => link_to "Show product", product_show_url
               ' |
 
-              => link_to "delete", product_url(@product), method: :delete,
+              => link_to "Delete", product_url(@product), method: :delete,
                 confirm: "are you sure you want to delete this product?"
+              ' |
+
+              => link_to "Register", register_url
+              ' |
 
         == yield
 
