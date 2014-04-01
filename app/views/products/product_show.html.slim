@@ -37,6 +37,6 @@
         td.td_1 => @product.product_name
         td.td_2 => @product.product_weight
         td.td_3 => @product.product_calories
-        td.td_4 = link_to "edit", product_edit_url(@product)
-        td.td_4 = link_to "delete", product_url(@product), method: :delete,
-          confirm: "are you sure you want to delete this item?"
+        td.td_4 = link_to "edit", products_edit_url(@product)
+        td.td_4 = link_to "delete", products_delete_url(@product), method: :delete,
+          confirm: "are you sure you want to delete #{@product.product_name}?"

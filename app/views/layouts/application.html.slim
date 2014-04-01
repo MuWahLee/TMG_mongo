@@ -29,16 +29,16 @@ html lang="en"
             p.links
               => link_to "My gear", gear_form_url
               ' |
-              => link_to "All products", product_url
+              => link_to "All products", products_url
               ' |
-              => link_to "New product", product_new_url
+              => link_to "New product", products_new_url
               ' |
-              => link_to "Show product", product_show_url
-              ' |
+              / => link_to "Show product", products_show_url
+              / ' |
 
-              => link_to "Delete", product_url(@product), method: :delete,
-                confirm: "are you sure you want to delete this product?"
-              ' |
+              / => link_to "Delete", products_url(@product), method: :delete,
+              /   confirm: "are you sure you want to delete this product?"
+              / ' |
 
               => link_to "Register", register_url
               ' |

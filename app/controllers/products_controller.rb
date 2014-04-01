@@ -1,4 +1,4 @@
-class ProductController < ApplicationController
+class ProductsController < ApplicationController
 
   before_action :is_authenticated?
   before_action :get_product, except: [ :product_index, :product_new, :product_create ]
@@ -34,7 +34,7 @@ class ProductController < ApplicationController
 
   def product_update
     if @product.update_attributes ( product_params )
-      redirect_to product_url( @product )
+      redirect_to products_url( @product )
     else
       flash.now[:alert] = @product.errors
       render :product_edit
@@ -43,14 +43,14 @@ class ProductController < ApplicationController
 
   def product_delete
     @product.destroy
-    redirect_to product_url, notice: "Deleted #{@product.product_name}."
+    redirect_to products_url, notice: "Deleted #{@product.product_name}."
   end
 
 
   private
 
   def get_product
-    @product = Product.find_by ( params[:id] )
+    @product = Product.find( params[:id] )
   end
 
   def product_params

@@ -12,12 +12,7 @@ class Product
 
   # validates :product_name, presence: true, uniqueness: {case_sensitive: false}
   validates :product_name, presence: true
-  # validates_length_of :product_name, minimum: 1
 
-  # def self.product_create(product_name, product_weight, product_calories)
-  #   db.product.insert( { product_name: blank, product_weight: blank, product_calories: blank} )
-  #     self.save
-  # end
 
 end
 
