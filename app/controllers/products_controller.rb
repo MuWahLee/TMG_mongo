@@ -1,14 +1,14 @@
 class ProductsController < ApplicationController
 
   before_action :is_authenticated?
-  before_action :get_product, except: [ :product_index, :product_new, :product_create ]
+  before_action :get_product, except: [ :index, :new, :create ]
 
-  def product_new
+  def new
     # this is our form
     @product = Product.new
   end
 
-  def product_create
+  def create
     # make it save here
     @product = Product.new ( product_params )
 
@@ -21,19 +21,20 @@ class ProductsController < ApplicationController
   end
 
 
-  def product_index
+  def index
     @products = Product.all.entries
   end
 
-  def product_show
+  def show
     # @product = Product.find(params[:id])
   end
 
-  def product_edit
+  def edit
   end
 
-  def product_update
-    if @product.update_attributes ( product_params )
+  def update
+    if
+      @product.update_attributes ( product_params )
       redirect_to products_url( @product )
     else
       flash.now[:alert] = @product.errors
@@ -41,7 +42,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  def product_delete
+  def destroy
     @product.destroy
     redirect_to products_url, notice: "Deleted #{@product.product_name}."
   end

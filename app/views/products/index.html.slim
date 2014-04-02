@@ -18,6 +18,6 @@
           td.td_2 = product.product_weight
           td.td_3 = product.product_calories
           td.td_4
-            / => link_to "more details", products_show_url(product)
-            => link_to "edit", products_edit_url(product)
-            =  link_to "delete", products_delete_url(product), method: :delete, confirm: "Are you sure you want to delete the product #{product.product_name}?"
+            / => link_to "more details", product_url(product)
+            => link_to "edit", edit_product_url(product)
+            =  link_to "delete", product_url(product), method: :delete, confirm: "Are you sure you want to delete the product ' #{product.product_name} '?"

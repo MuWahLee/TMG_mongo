@@ -1,6 +1,9 @@
 TallyMyGear::Application.routes.draw do
 
+
   root    'site#index'
+
+  resources :products
 
   # general pages
   get     'privacy' => 'site#privacy'
@@ -23,16 +26,16 @@ TallyMyGear::Application.routes.draw do
   patch   'reset/:code' => 'password#update'
 
   # managing the products
-  get     'products/new'      =>  'products#product_new'
-  post    'products'          =>  'products#product_create'
+  # get     'products/new'      =>  'products#new'
+  # post    'products'          =>  'products#create'
 
-  get     'products'          =>  'products#product_index'
-  get     'products/:id'      =>  'products#product_show',  as: :products_show
+  # get     'products'          =>  'products#index'
+  # get     'products/:id'      =>  'products#show',  as: :products_show
 
-  get     'products/:id/edit' =>  'products#product_edit',  as: :products_edit
-  patch   'products/:id'      =>  'products#product_update'
+  # get     'products/:id/edit' =>  'products#edit',  as: :products_edit
+  # patch   'products/:id'      =>  'products#update'
 
-  delete  'products/:id'      =>  'products#product_delete', as: :products_delete
+  # delete  'products/:id'      =>  'products#delete', as: :products_delete
 
   # managing the user's gear
   get     'gear'  =>  'gear#edit',    as: :gear_form
