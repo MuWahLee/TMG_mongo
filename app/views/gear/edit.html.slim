@@ -1,5 +1,5 @@
 .container
-  = form_for (current_user), url: gear_form_url, method: :patch do |f|
+  = form_for @current_user, url: gear_form_url, method: :patch do |f|
 
     div class="All_Products_list"
       h3.header Select my gear
@@ -15,13 +15,13 @@
         tfoot
           tr
             th.th_7 = "Tally My Gear - Totals"
-            th.th_2 = "total weight"
-            th.th_3 = "total calories"
+            th#weight.th_2 = "total weight"
+            th#calories.th_3 = "total calories"
         tbody
           = f.collection_check_boxes :product_ids, @products, :id, :product_name do |b|
             - product = b.instance_variable_get(:@object)
-            tr
-              td.td_6 = b.check_box
+            tr.product_item
+              td.td_6 = b.check_box(class: "product_box", :"data-weight" => product.product_weight, :"data-calories" => product.product_calories)
               td.td_1 = product.product_name
               td.td_2 = product.product_weight
               td.td_3 = product.product_calories

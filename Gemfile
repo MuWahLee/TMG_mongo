@@ -9,6 +9,7 @@ gem 'slim'
 gem 'bson_ext'
 gem 'mongoid', github:"mongoid/mongoid"
 gem 'bcrypt'
+gem 'coffee-rails'
 
 group :development, :test do
   # gem "better_errors"

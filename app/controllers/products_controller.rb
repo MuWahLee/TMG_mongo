@@ -4,19 +4,17 @@ class ProductsController < ApplicationController
   before_action :get_product, except: [ :index, :new, :create ]
 
   def new
-    # this is our form
     @product = Product.new
   end
 
   def create
-    # make it save here
     @product = Product.new ( product_params )
 
     if @product.save
       redirect_to gear_form_url ( @product )
     else
       flash.now[:alert] = @product.errors
-      render :product_new
+      render :new
     end
   end
 
@@ -26,7 +24,6 @@ class ProductsController < ApplicationController
   end
 
   def show
-    # @product = Product.find(params[:id])
   end
 
   def edit
@@ -38,7 +35,7 @@ class ProductsController < ApplicationController
       redirect_to products_url( @product )
     else
       flash.now[:alert] = @product.errors
-      render :product_edit
+      render :edit
     end
   end
 
