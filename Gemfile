@@ -10,6 +10,9 @@ gem 'bson_ext'
 gem 'mongoid', github:"mongoid/mongoid"
 gem 'bcrypt'
 gem 'coffee-rails'
+gem 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'mongoid-grid_fs'
 
 group :development, :test do
   # gem "better_errors"
