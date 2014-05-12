@@ -4,10 +4,11 @@
   table class="table table-bordered"
     thead
       tr
-        th.th_1 Product name
-        th.th_2 Product Weight (in grams)
-        th.th_3 Product Calories (in calories)
-        th.th_3 Product Image
+        th.th_1 Name
+        th.th_8 Category
+        th.th_2 Weight (grams)
+        th.th_3 Calories (calories)
+        th.th_9 Image
         th.th_4 Action
         th.th_4
 
@@ -15,9 +16,10 @@
       / - for item in @products
       tr
         td.td_1 => @product.product_name
+        td.td_8 => @product.product_category
         td.td_2 => @product.product_weight
         td.td_3 => @product.product_calories
-        td.td_3 => @product.product_image
+        td.td_9 => @product.product_image.url
         td.td_4 = link_to "edit", edit_product_url(@product)
         td.td_4 = link_to "delete", product_url(@product), method: :delete,
           confirm: "are you sure you want to delete ' #{@product.product_name} ' ?"

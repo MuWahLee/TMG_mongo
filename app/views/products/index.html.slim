@@ -5,27 +5,26 @@
 /   | My gear
 /   p.lead (with off-canvas sidebar)
 
-.container-fluid
-  .row.row-offcanvas.row-offcanvas-left
-    #sidebar.col-sm-3.col-md-2.sidebar-offcanvas role="navigation"
-      ul.nav.nav-sidebar
-        / li.active
-        /   a href="#"  Gear
-        li
-          a href="products"  All gear
-        li
-          a href="gear"  My gear
-        li
-          a href="products/new"  Add gear
-      ul.nav.nav-sidebar
-        li
-          a href=""  Profile
-    /! /span
-    .col-sm-9.col-md-10.main
-      /! toggle sidebar button
-      p.visible-xs
-        button.btn.btn-primary.btn-xs data-toggle="offcanvas" type="button"
-          i.glyphicon.glyphicon-chevron-left
+/ .container-fluid
+/   .row.row-offcanvas.row-offcanvas-left
+/     #sidebar.col-sm-3.col-md-2.sidebar-offcanvas role="navigation"
+/       ul.nav.nav-sidebar
+/         / li.active
+/         /   a href="#"  Gear
+/         li
+/           a href="products"  All gear
+/         li
+/           a href="gear"  My gear
+/         li
+/           a href="products/new"  Add gear
+/         li
+/           a href=""  Profile
+/     /! /span
+/     .col-sm-9.col-md-10.main
+/       /! toggle sidebar button
+/       p.visible-xs
+/         button.btn.btn-primary.btn-xs data-toggle="offcanvas" type="button"
+/           i.glyphicon.glyphicon-chevron-left
 
 
 .container
@@ -33,39 +32,44 @@
     .col-xs-6.col-sm-3.placeholder.text-center
       img.center-block.img-responsive.img-circle alt=("Generic placeholder thumbnail") src="/assets/clothing.jpg"
         h4 Clothing
-        span.text-muted Something else
+        / span.text-muted Something else
     .col-xs-6.col-sm-3.placeholder.text-center
       img.center-block.img-responsive.img-circle alt=("Generic placeholder thumbnail") src="assets/footwear2.jpg"
         h4 Footwear
-        span.text-muted Something else
+        / span.text-muted Something else
     .col-xs-6.col-sm-3.placeholder.text-center
       img.center-block.img-responsive.img-circle alt=("Generic placeholder thumbnail") src="assets/accessories3.jpg"
         h4 Accessories
-        span.text-muted Something else
+        / span.text-muted Something else
     .col-xs-6.col-sm-3.placeholder.text-center
       img.center-block.img-responsive.img-circle alt=("Generic placeholder thumbnail") src="assets/food.jpg"
         h4 Food
-        span.text-muted Something else
+        / span.text-muted Something else
 
 
 .container
   h3.header Select my gear
-  table.table.table-striped.table.responsive
-    thead
-      tr
-        th Product Name
-        th Product Category
-        th Product Weight (in grams)
-        th Product Calories (in calories)
-        th Product Image
-    tbody
-      - @products.each do |product|
+  .table-responsive
+    table.table.table-striped
+
+      thead
         tr
-          td = link_to product.product_name, product_url(product)
-          td = product.product_category
-          td = product.product_weight
-          td = product.product_calories
-          td = image_tag product.product_image.url
-            / => link_to "more details", product_url(product)
-            => link_to "edit", edit_product_url(product)
-            =  link_to "delete", product_url(product), method: :delete, confirm: "Are you sure you want to delete the product ' #{product.product_name} '?"
+          th.th_1 Name
+          th.th_8 Category
+          th.th_2 Weight (grams)
+          th.th_3 Calories (calories)
+          th.th_9 Image
+          th.th_4
+      tbody
+        - @products.each do |product|
+          tr
+            td.td_1 = link_to product.product_name, product_url(product)
+            td.td_8 = product.product_category
+            td.td_2 = product.product_weight
+            td.td_3 = product.product_calories
+            / td.td_9 = image_tag product.product_image.url
+            td.td_4
+              / => link_to "more details", product_url(product)
+              => link_to "edit", edit_product_url(product)
+              | &frasl;
+              =  link_to " delete", product_url(product), method: :delete, confirm: "Are you sure you want to delete the product ' #{product.product_name} '?"

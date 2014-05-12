@@ -8,8 +8,8 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
  *= require_tree .
+ *= require_self
  */
 
 
@@ -172,25 +172,25 @@ thead {
 tbody td, thead th, tfoot th {
   float:                left;
   font-weight:          bold;
-  border-left-style:    double;
+/*  border-left-style:    double;
   border-top-style:     double;
   border-right-style:   double;
-  border-bottom-style:  double;
+  border-bottom-style:  double;*/
   }
 
 
 .th_1, .td_1 {
-  width:            200px;
+  width:            300px;
   min-height:       27px;
 }
 
 .th_2, .td_2 {
-  width:            150px;
+  width:            100px;
   min-height:       27px;
 }
 
 .th_3, .td_3 {
-  width:             150px;
+  width:             100px;
   min-height:        27px;
 }
 
@@ -217,6 +217,17 @@ tbody td, thead th, tfoot th {
 
 .th_7 {
   width:              600px;
+}
+
+.th_8, .td_8 {
+  width:            100px;
+  min-height:       27px;
+}
+
+.th_9, .td_9 {
+  width:            100px;
+  min-height:       27px;
+  text-align:       center;
 }
 
 tbody tr:hover {
@@ -294,4 +305,8 @@ tbody tr:hover {
 }
 .main .page-header {
   margin-top: 0;
+}
+
+body, div {
+  border: 1px black solid;
 }

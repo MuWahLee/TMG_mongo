@@ -19,15 +19,40 @@ html lang="en"
               =link_to "Log Out", logout_url, method: :delete, class: "btn btn-danger logout-link" if current_user
             h1.header Tally My Gear
             h2 class="header" the place to weigh your gear
-            p.links
-              => link_to "My gear", gear_form_url
-              ' |
-              => link_to "All products", products_url
-              ' |
-              => link_to "New product", new_product_url
-              ' |
-              => link_to "Register", register_url
-              ' |
+            / p.links
+            /   => link_to "My gear", gear_form_url
+            /   ' |
+            /   => link_to "All products", products_url
+            /   ' |
+            /   => link_to "New product", new_product_url
+            /   ' |
+            /   => link_to "Register", register_url
+            /   ' |
+
+
+    .container-fluid
+      .row.row-offcanvas.row-offcanvas-left
+        #sidebar.col-sm-3.col-md-2.sidebar-offcanvas role="navigation"
+          ul.nav.nav-sidebar
+            / li.active
+            /   a href="#"  Gear
+            li
+              a href="/products"  All gear
+            li
+              a href="/gear"  My gear
+            li
+              a href="/products/new"  Add gear
+            li
+              a href=""  Profile
+        /! /span
+        .col-sm-9.col-md-10.main
+          /! toggle sidebar button
+          p.visible-xs
+            button.btn.btn-primary.btn-xs data-toggle="offcanvas" type="button"
+              i.glyphicon.glyphicon-chevron-left
+
+
+
 
         == yield
 
@@ -45,7 +70,7 @@ html lang="en"
         /         | &bull;
         /         | &copy; 2014 TallyMyGear
 
-        .navbar.navbar-default.navbar-fixed-bottom
+        .navbar.navbar-default.navbar-bottom
           .navbar-header
             a.navbar-brand href="#"  TMG
           ul.nav.navbar-nav

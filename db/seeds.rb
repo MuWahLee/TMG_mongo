@@ -70,7 +70,7 @@ products = Product.create([
     :product_calories=>250
     },
   {:product_name=>"Under Armour Singlet",
-    :product_category=>nil,
+    :product_category=>"Clothing",
     :product_weight=>18,
     :product_calories=>0
     },

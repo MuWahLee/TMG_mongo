@@ -9,11 +9,11 @@
         thead
           tr
             th.th_6 = "Select"
-            th.th_1 = "Product Name"
-            th.th_2 = "Product Category"
-            th.th_2 = "Product Weight (in grams)"
-            th.th_3 = "Product Calories (in calories)"
-            th.th_3 Product Image
+            th.th_1 = "Name"
+            th.th_8 = "Category"
+            th.th_2 = "Weight (grams)"
+            th.th_3 = "Calories (calories)"
+            th.th_9 = "Image"
         tfoot
           tr
             th.th_7 = "Tally My Gear - Totals"
@@ -25,10 +25,10 @@
             tr.product_item
               td.td_6 = b.check_box(class: "product_box", :"data-weight" => product.product_weight, :"data-calories" => product.product_calories, checked: @product_ids.include?(product.id))
               td.td_1 = product.product_name
-              td.td_2 = product.product_category
+              td.td_8 = product.product_category
               td.td_2 = product.product_weight
               td.td_3 = product.product_calories
-              td.td_2 = product.product_image
+              td.td_9 = image_tag product.product_image.url
 
 
       = f.submit "Save my list", class:"btn btn-warning"
