@@ -23,7 +23,7 @@
           = f.collection_check_boxes :product_ids, @products, :id, :product_name do |b|
             - product = b.instance_variable_get(:@object)
             tr.product_item
-              td.td_6 = b.check_box(class: "product_box", :"data-weight" => product.product_weight, :"data-calories" => product.product_calories)
+              td.td_6 = b.check_box(class: "product_box", :"data-weight" => product.product_weight, :"data-calories" => product.product_calories, checked: @product_ids.include?(product.id))
               td.td_1 = product.product_name
               td.td_2 = product.product_category
               td.td_2 = product.product_weight

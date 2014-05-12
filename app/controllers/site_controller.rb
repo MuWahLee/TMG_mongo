@@ -8,6 +8,10 @@ class SiteController < ApplicationController
     # render text: is_authenticated?
   end
 
+  def products
+  end
+
+
   def privacy
   end
 
