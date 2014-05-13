@@ -12,19 +12,25 @@ Product.destroy_all
 temp_password = "123"
 
 User.create([
-  {email: "mlee2569@hotmail.com",
-    password: temp_password,
-    password_confirmation: temp_password
+  {email:                   "mlee2569@hotmail.com",
+    password:               temp_password,
+    password_confirmation:  temp_password,
+    first_name:             "Mu Wah",
+    last_name:              "Lee"
     },
 
-  {email: "lee-mw@hotmail.com",
-    password: temp_password,
-    password_confirmation: temp_password
+  {email:                   "lee-mw@hotmail.com",
+    password:               temp_password,
+    password_confirmation:  temp_password,
+    first_name:             "MW",
+    last_name:              "Lee"
     },
 
-  {email: "mlee2569@gmail.com",
-    password: temp_password,
-    password_confirmation: temp_password
+  {email:                   "mlee2569@gmail.com",
+    password:               temp_password,
+    password_confirmation:  temp_password,
+    first_name:             "A N",
+    last_name:              "Other"
     },
   ])
 

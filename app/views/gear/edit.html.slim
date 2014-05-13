@@ -1,35 +1,32 @@
-.container
-  = form_for @current_user, url: gear_form_url, method: :patch do |f|
-
-    div class="All_Products_list"
-      h3.header Select my gear
-      table.table.table-bordered
-        / p Click on the checkboxes to select your gear
-        / table class="table table-bordered"
-        thead
-          tr
-            th.th_6 = "Select"
-            th.th_1 = "Name"
-            th.th_8 = "Category"
-            th.th_2 = "Weight (grams)"
-            th.th_3 = "Calories (calories)"
-            th.th_9 = "Image"
-        tfoot
-          tr
-            th.th_7 = "Tally My Gear - Totals"
-            th#weight.th_2 = "total weight"
-            th#calories.th_3 = "total calories"
-        tbody
-          = f.collection_check_boxes :product_ids, @products, :id, :product_name do |b|
-            - product = b.instance_variable_get(:@object)
-            tr.product_item
-              td.td_6 = b.check_box(class: "product_box", :"data-weight" => product.product_weight, :"data-calories" => product.product_calories, checked: @product_ids.include?(product.id))
-              td.td_1 = product.product_name
-              td.td_8 = product.product_category
-              td.td_2 = product.product_weight
-              td.td_3 = product.product_calories
-              td.td_9 = image_tag product.product_image.url
+== render partial: 'layouts/sidebar'
+= form_for @current_user, url: gear_form_url, method: :patch do |f|
+  h2.sub-header Select my gear
+  .table-responsive
+    table.table.table-striped
+      thead
+        tr
+          th.th_6     = "Select"
+          th.th_8     = "Category"
+          th.th_1     = "Name"
+          th.col_wt   = "Weight (grams)"
+          th.col_cat  = "Calories (calories)"
+          th.th_9     = "Image"
+      tfoot
+        tr
+          th.th_7 colspan="3" = "Tally My Gear - Totals"
+          th#weight.th_2 colspan="1" = "total weight"
+          th#calories.th_3 colspan="1" = "total calories"
+      tbody
+        = f.collection_check_boxes :product_ids, @products, :id, :product_name do |b|
+          - product = b.instance_variable_get(:@object)
+          tr.product_item
+            td.td_6 = b.check_box(class: "product_box", :"data-weight" => product.product_weight, :"data-calories" => product.product_calories, checked: @product_ids.include?(product.id))
+            td.td_8     = product.product_category
+            td.td_1     = product.product_name
+            td.col_wt   = product.product_weight
+            td.col_cat  = product.product_calories
+            td.td_9     = image_tag product.product_image.url
 
 
-      = f.submit "Save my list", class:"btn btn-warning"
+    = f.submit "Save my list", class:"btn btn-success"
 

@@ -9,4 +9,8 @@ p.links
   = link_to "delete", product_url(@product), method: :delete,
     confirm: "are you sure you want to delete the product ' #{@product.product_name} '?"
 
+== render partial: 'layouts/sidebar'
 == render partial: 'form'
+
+
+<%= link_to "show", product_url(@product) /%>

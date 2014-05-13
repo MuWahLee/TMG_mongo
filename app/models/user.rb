@@ -11,11 +11,13 @@ class User
   attr_accessor :password, :password_confirmation
 
 
-  field :email, type: String
-  field :salt,  type: String
-  field :fish,  type: String
-  field :code,  type: String
-  field :expires_at, type: Time
+  field :email,       type: String
+  field :first_name,  type: String
+  field :last_name,   type: String
+  field :salt,        type: String
+  field :fish,        type: String
+  field :code,        type: String
+  field :expires_at,  type: Time
 
   before_save :set_random_password, :encrypt_password
   validates :email, presence: true, uniqueness: {case_sensitive: false}

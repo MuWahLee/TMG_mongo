@@ -1,0 +1,90 @@
+<div class="container-fluid">
+
+      <div class="row row-offcanvas row-offcanvas-left">
+
+         <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
+
+            <ul class="nav nav-sidebar">
+              <li class="active"><a href="#">Gear</a></li>
+              <li><a href="/products">All gear</a></li>
+              <li><a href="/gear">My gear</a></li>
+              <li><a href="/products/new">Add gear</a></li>
+            </ul>
+
+
+        </div><!--/span-->
+
+        <div class="col-sm-9 col-md-10 main">
+
+          <!--toggle sidebar button-->
+          <p class="visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+          </p>
+
+<!--       <h1 class="page-header">
+            Dashboard
+            <p class="lead">(with off-canvas sidebar)</p>
+          </h1> -->
+          <p class="welcome"> welcome <%= current_user.first_name %></p>
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder text-center">
+              <img src="assets/clothing.jpg" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+              <h4>Clothing</h4>
+<!--               <span class="text-muted">Something else</span> -->
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder text-center">
+              <img src="assets/footwear3.jpg" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+              <h4>Footwear</h4>
+<!--               <span class="text-muted">Something else</span> -->
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder text-center">
+              <img src="assets/accessories3.jpg" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+              <h4>Accessories</h4>
+<!--               <span class="text-muted">Something else</span> -->
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder text-center">
+              <img src="assets/food.jpg" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+              <h4>Food</h4>
+<!--               <span class="text-muted">Something else</span> -->
+            </div>
+          </div>
+
+          <hr>
+
+          <h2 class="sub-header">All gear</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+<!--                   <th>Select</th> -->
+                  <th>Category</th>
+                  <th>Name</th>
+                  <th class="col_wt">Weight (grams)</th>
+                  <th class="col_cat">Calories (calories)</th>
+
+                </tr>
+              </thead>
+              <tbody>
+              <% @products.each do |product| %>
+                <tr>
+                  <td><%= product.product_category %></td>
+                  <td><%= link_to product.product_name, product_url(product) %></td>
+                  <td class="col_wt"><%= product.product_weight %></td>
+                  <td class="col_cat"><%= product.product_calories %></td>
+
+                </tr>
+                <% end %>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th colspan="2">Tally My Gear - Totals</th>
+                  <th colspan="1"></th>
+                  <th colspan="1"></th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+      </div><!--/row-->
+  </div>
+</div><!--/.container-->

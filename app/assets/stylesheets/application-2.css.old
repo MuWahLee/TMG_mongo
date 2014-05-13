@@ -1,0 +1,389 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+/*** Navbar ***/
+
+.navbar-fixed-top {
+  background-color: hsla(0, 0%, 0%, 0.6);
+  min-height:       50px;
+  padding-top:      10px;
+}
+
+.welcome {
+  text-align:       right;
+  margin-top:       -30px;
+  margin-bottom:    0px;
+  float:            right;
+  color:            hsla(300, 100%, 100%, 1);
+  font-size:        15px;
+  font-weight:      bold;
+}
+
+.pull_right {
+  text-align:       right;
+  margin-top:       5px;
+  float:            right;
+}
+
+/*** body ***/
+
+body {
+
+  font-family:      Verdana, Helvetica, Arial, sans-serif;
+ /* background:       url(Trailrun_Camp_KlausFengler.jpg) no-repeat center center fixed;*/
+/*  font-color:       white;*/
+  background-size:  cover;
+  height:           100%;
+  font-style:       italic;
+  padding-top:      117px;
+}
+
+.links {
+  padding-top:      10px;
+  font-color:       hsla(249, 65%, 48%, 1);
+}
+
+
+fieldset {
+  padding:           0px;
+  margin:            0px;
+  border-top:        0px;
+  min-width:         0px;
+}
+
+.col-md-5 {
+  padding-left:     0px;
+}
+
+.container {
+  border-bottom:     50px;
+  padding-left:      50px;
+}
+
+legend {
+  /*font-size:        18px;*/
+  color:            hsla(360, 84%, 98%, 1);
+  margin-bottom:    10px;
+  padding-top:      50px;
+  border-bottom:      0px;
+}
+
+.own_detail {
+  color:            hsla(360, 84%, 98%, 1);
+}
+
+
+h1.header {
+
+  font-style:       italic;
+  font-weight:      bold;
+ /* font-size:        50px;*/
+  color:            hsla(360, 84%, 98%, 1);
+  margin-top:       0px;
+  margin-bottom:    0px;
+
+}
+
+h2.header {
+  font-style:       italic;
+  font-weight:      normal;
+  font-size:        20px;
+  color:            hsla(360, 84%, 98%, 1);
+  margin-top:       0px;
+  margin-bottom:    0px;
+}
+
+
+h3.header {
+  font-size:        20px;
+  color:            hsla(360, 84%, 98%, 1);
+  font-weight:      bold;
+  margin-top:        5px;
+}
+
+
+.form-group {
+  color:            hsla(360, 84%, 98%, 1);
+  margin-left:      0px;
+}
+
+.form-group input.entry {
+  color:            black;
+  height:            35px;
+  width:            200px;
+}
+
+/*** table formatting ***/
+
+
+
+table {
+  width:            100%;
+    }
+
+thead, tbody, tr, td, th {
+  display:          block;
+  background-color: hsla(0, 100%, 100%, 0.28);
+}
+
+tfoot {
+  background-color: hsla(0, 100%, 100%, 0.28);
+}
+
+tr:after {
+    content:        ' ';
+    display:        block;
+    visibility:     hidden;
+    clear:          both;
+}
+
+thead th {
+  height:           51px;
+  font-size:        16px;
+/*  text-align:       center;*/
+  }
+
+tfoot {
+  font-size:        16px;
+}
+
+tbody {
+  height:           325px;
+  overflow-y:       auto;
+}
+
+thead {
+/*     fallback */
+}
+
+
+tbody td, thead th, tfoot th {
+  float:                left;
+  font-weight:          bold;
+/*  border-left-style:    double;
+  border-top-style:     double;
+  border-right-style:   double;
+  border-bottom-style:  double;*/
+  }
+
+
+.th_1, .td_1 {
+  width:            300px;
+  min-height:       27px;
+}
+
+.th_2, .td_2 {
+  width:            100px;
+  min-height:       27px;
+}
+
+.th_3, .td_3 {
+  width:             100px;
+  min-height:        27px;
+}
+
+.th_2, .th_3 {
+  text-align:        center;
+}
+
+.td_2, .td_3 {
+  text-align:        right;
+}
+
+.th_4, .td_4 {
+  width:             100px;
+  text-align:        center;
+  min-height:        27px;
+}
+
+
+.th_6, .td_6 {
+  width:             65px;
+  text-align:        center;
+  min-height:        27px;
+}
+
+.th_7 {
+  width:              600px;
+}
+
+.th_8, .td_8 {
+  width:            100px;
+  min-height:       27px;
+}
+
+.th_9, .td_9 {
+  width:            100px;
+  min-height:       27px;
+  text-align:       center;
+}
+
+tbody tr:hover {
+  background:         hsla(62, 94%, 69%, 1);
+}
+
+
+/*** FOOTER ***/
+
+.navbar-fixed-bottom {
+  text-align:         center;
+  height:             10px;
+  background-color: hsla(0, 0%, 0%, 0.6);
+  color:            hsla(360, 84%, 98%, 1);
+}
+
+
+
+/***  SIDE BAR ***/
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -33%;
+  }
+
+  .row-offcanvas-left.active {
+    left: 33%;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 33%;
+    margin-left: 10px;
+  }
+}
+
+
+/* Sidebar navigation */
+.nav-sidebar {
+  background-color: #f5f5f5;
+  margin-right: -15px;
+  margin-bottom: 20px;
+  margin-left: -15px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a {
+  color: #fff;
+  background-color: #428bca;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/* new css */
+
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+body {
+  padding-top: 50px;
+  background-color: #f5f5f5;
+}
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #fff;
+}
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -33%;
+  }
+
+  .row-offcanvas-left.active {
+    left: 33%;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 33%;
+    margin-left: 10px;
+  }
+}
+
+
+/* Sidebar navigation */
+.nav-sidebar {
+  background-color: #f5f5f5;
+  margin-right: -15px;
+  margin-bottom: 20px;
+  margin-left: -15px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a {
+  color: #fff;
+  background-color: #428bca;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
