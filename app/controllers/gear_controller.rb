@@ -3,7 +3,15 @@ class GearController < ApplicationController
 
   def edit
     @products = Product.all.entries
+
+    @weight = 0
+    @calories = 0
+
     @product_ids = current_user.carry_items.map do |ci|
+      product = Product.find(ci.product.id)
+      @weight += product.product_weight
+      @calories += product.product_calories
+
       ci.product.id
     end
     puts @product_ids.inspect

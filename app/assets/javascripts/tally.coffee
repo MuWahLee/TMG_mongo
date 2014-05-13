@@ -1,10 +1,10 @@
 
-sum_weight = 0
-sum_calories = 0
 
 $ ->
-  $('#weight').html(sum_weight)
-  $('#calories').html(sum_calories)
+  sum_weight = parseInt($('#weight').html()) || 0
+  sum_calories = parseInt($('#calories').html()) || 0
+  # $('#weight').html(sum_weight)
+  # $('#calories').html(sum_calories)
 
   $('.product_box').on "click", (e) =>
     if ($(e.target).is(':checked')) == true
