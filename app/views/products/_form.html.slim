@@ -7,24 +7,24 @@
     p.own_detail Add in your own gear's details here, then click on Create product.
 
     .form-group
-      = f.label :product_category, class: "input-group input-group-sm"
-      = f.text_field :product_category, class: "form-control" ,placeholder: "Product category"
-
+      = f.label :Category, class: "input-group input-group-sm"
+      / = f.text_field :product_category, class: "form-control" ,placeholder: "Product category"
+      = f.select :product_category, option:["clothing", "footwear", "accessories", "food"]
 
     .form-group
-      = f.label :product_name, class: "input-group input-group-sm"
+      = f.label :Product_name, class: "input-group input-group-sm"
       = f.text_field :product_name, class: "form-control" ,placeholder: "Product name"
 
     .form-group
-      = f.label :product_weight, class: "input-group input-group-sm"
+      = f.label :Weight_in_grams, class: "input-group input-group-sm"
       = f.number_field :product_weight, class: "form-control", placeholder: "Product weight (in grams)."
 
     .form-group
-      = f.label :product_calories, class: "input-group input-group-sm"
+      = f.label :Calories_in_calories, class: "input-group input-group-sm"
       = f.number_field :product_calories, class: "form-control" ,placeholder: "Product calories (in calories)."
 
     .form-group
-      = f.label :product_image, class: "sr-only"
+      = f.label :Product_image, class: "input-group input-group-sm"
       = f.file_field :product_image, class: "form-control" ,placeholder: "Product image"
 
     .form-group
