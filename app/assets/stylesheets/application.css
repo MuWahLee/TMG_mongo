@@ -108,6 +108,10 @@ th {
   vertical-align: top !important;
 }
 
+#weight, #calories {
+  text-align: right;
+}
+
 
 .img-circle {
   width: 150px;

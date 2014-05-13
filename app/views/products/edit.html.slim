@@ -12,5 +12,7 @@ p.links
 == render partial: 'layouts/sidebar'
 == render partial: 'form'
 
-
-<%= link_to "show", product_url(@product) /%>
+<div>
+  <a href="delete" class="btn btn-primary active" role="button">update</a>
+  <a href="show" class="btn btn-danger active" role="button">delete</a>
+</div>

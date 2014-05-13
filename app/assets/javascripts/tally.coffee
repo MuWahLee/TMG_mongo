@@ -1,37 +1,21 @@
-# calculate the default (base weight 0 + products already checked?)
-base_weight = 0 #total weight on opening page)
-base_calories = 0 #total weight on opening page)
+
+sum_weight = 0
+sum_calories = 0
 
 $ ->
-  $('#weight').html(weight)
-  $('#calories').html(calories)
+  $('#weight').html(sum_weight)
+  $('#calories').html(sum_calories)
 
   $('.product_box').on "click", (e) =>
-    for tick in (':checked')
-      if ($(@).is(':checked')) == true
-        weight = base_weight + $(@).data("weight")
-        calories = base_calories + $(@).data("calories")
-      else
-        $(@).is(':checked') == false
-        weight = base_weight - $(@).data("weight")
-        calories = base_calories - $(@).data("calories")
-    $('#weight').html(weight)
-    $('#calories').html(calories)
-
-
-
-
-
-
-    # if checkbox == true
-    #   sum (:product_weight) and sum(:product_calories)
-    $(@).data("weight")
-    # calories
-
-    if $(@).is(':checked')
-      # checked, add up to total
+    if ($(e.target).is(':checked')) == true
+      sum_weight += $(e.target).data("weight")
+      sum_calories += $(e.target).data("calories")
     else
-      # not checked, decrease from total
+      sum_weight -= $(e.target).data("weight")
+      sum_calories -= $(e.target).data("calories")
+    $('#weight').html(sum_weight)
+    $('#calories').html(sum_calories)
 
-    $('#weight').html(weight)
-    $('#calories').html(calories)
+
+
+
