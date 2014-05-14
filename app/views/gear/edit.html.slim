@@ -13,26 +13,26 @@
       thead
         tr
           th.col_check  = "Select"
-          th.th_8       = "Category"
-          th.th_1       = "Name"
+          th.col_cat    = "Category"
+          th.col_name   = "Name"
           th.col_wt     = "Weight (grams)"
-          th.col_cat    = "Calories (calories)"
-          th.th_9       = "Image"
+          th.col_cal    = "Calories (calories)"
+          th.col_img    = "Image"
       tfoot
         tr
-          th.th_7 colspan="3"           = "Tally My Gear - Totals"
-          th#weight.th_2 colspan="1"    = @weight
-          th#calories.th_3 colspan="1"  = @calories
+          th.col_sum colspan="3"           = "Tally My Gear - Totals"
+          th#weight.col_sumw colspan="1"    = @weight
+          th#calories.col_sumc colspan="1"  = @calories
       tbody.searchable
         = f.collection_check_boxes :product_ids, @products, :id, :product_name do |b|
           - product = b.instance_variable_get(:@object)
           tr.product_item
             td.col_check = b.check_box(class: "product_box", :"data-weight" => product.product_weight, :"data-calories" => product.product_calories, checked: @product_ids.include?(product.id))
-            td.td_8     = product.product_category
-            td.td_1     = product.product_name
+            td.col_cat  = product.product_category
+            td.col_name = product.product_name
             td.col_wt   = product.product_weight
-            td.col_cat  = product.product_calories
-            td.td_9     = image_tag product.product_image.url
+            td.col_cal  = product.product_calories
+            td.col_img  = image_tag product.product_image.url
 
 
     = f.submit "Save my list", class:"btn btn-success"

@@ -1,27 +1,27 @@
 == render partial: 'layouts/sidebar'
 
-.container
-  h2.sub-header Display item
-  div class="table-responsive"
-    table class="table table-bordered"
-      thead
-        tr
-          th.th_1     Name
-          th.th_8     Category
-          th.col_wt   Weight (grams)
-          th.col_cat  Calories (calories)
-          th.th_9     Image
-          th.th_4     Action
-          th.th_4
 
-      tbody
-        / - for item in @products
-        tr
-          td.td_1     => @product.product_name
-          td.td_8     => @product.product_category
-          td.col_wt   => @product.product_weight
-          td.col_cat  => @product.product_calories
-          td.td_9     => @product.product_image.url
-          td.td_4     = link_to "edit", edit_product_url(@product)
-          td.td_4     = link_to "delete", product_url(@product), method: :delete,
-            confirm: "are you sure you want to delete ' #{@product.product_name} ' ?"
+h2.sub-header Display item
+div class="table-responsive"
+  table class="table table-bordered"
+    thead
+      tr
+        th.col_name             Name
+        th.col_cat              Category
+        th.col_wt               Weight (grams)
+        th.col_cal              Calories (calories)
+        th.col_img              Image
+        th.col_act colspan="2"  Action
+
+
+    tbody
+      / - for item in @products
+      tr
+        td.col_name   => @product.product_name
+        td.col_cat    => @product.product_category
+        td.col_wt     => @product.product_weight
+        td.col_cal    => @product.product_calories
+        td.col_img    => @product.product_image.url
+        td.col_act    = link_to "edit", edit_product_url(@product)
+        td.col_act    = link_to "delete", product_url(@product), method: :delete,
+          confirm: "are you sure you want to delete ' #{@product.product_name} ' ?"

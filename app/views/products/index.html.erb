@@ -64,20 +64,20 @@
             <table class="table table-striped filter">
               <thead>
                 <tr>
-                  <th>Category</th>
-                  <th>Name</th>
+                  <th class="col_cat">Category</th>
+                  <th class="col_name">Name</th>
                   <th class="col_wt">Weight (grams)</th>
-                  <th class="col_cat">Calories (calories)</th>
+                  <th class="col_cal">Calories (calories)</th>
 
                 </tr>
               </thead>
               <tbody class="searchable"  id="table">
               <% @products.each do |product| %>
                 <tr>
-                  <td><%= product.product_category %></td>
-                  <td><%= link_to product.product_name, product_url(product) %></td>
+                  <td class="col_cat"><%= product.product_category %></td>
+                  <td class="col_name"><%= link_to product.product_name, product_url(product) %></td>
                   <td class="col_wt"><%= product.product_weight %></td>
-                  <td class="col_cat"><%= product.product_calories %></td>
+                  <td class="col_cal"><%= product.product_calories %></td>
 
                 </tr>
                 <% end %>

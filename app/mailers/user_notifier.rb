@@ -1,7 +1,7 @@
 class UserNotifier < ActionMailer::Base
 
-  LINK_TO_RESET = "[ToddyCat] Reset your credentials"
-  WAS_RESET     = "[ToddyCat] Your password has been reset!"
+  LINK_TO_RESET = "[TallyMyGear] Reset your credentials"
+  WAS_RESET     = "[TallyMyGear] Your password has been reset!"
 
   default from: "TallyMyGear <webmaster@TallyMyGear.com>"
 

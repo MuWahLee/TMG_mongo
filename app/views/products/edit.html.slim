@@ -1,18 +1,16 @@
 p.links
-  /   => link_to "all products", products_url
-  /   ' |
-  /   => link_to "new product", product_new_url
-  /   ' |
-  => link_to "show product", product_url(@product)
-  ' |
-
-  = link_to "delete", product_url(@product), method: :delete,
-    confirm: "are you sure you want to delete the product ' #{@product.product_name} '?"
+    / => link_to "all products", products_url, :class=>'btn btn-primary active'
+    / ' |
+    / => link_to "new product", product_new_url
+    / ' |
 
 == render partial: 'layouts/sidebar'
 == render partial: 'form'
 
-<div>
-  <a href="delete" class="btn btn-primary active" role="button">update</a>
-  <a href="show" class="btn btn-danger active" role="button">delete</a>
-</div>
+p.links
+  => link_to "back", product_url(@product)
+  ' |
+  => link_to "all products", products_url
+  ' |
+  = link_to "delete", product_url(@product), method: :delete,
+    confirm: "are you sure you want to delete the product ' #{@product.product_name} '?"
