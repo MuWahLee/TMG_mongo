@@ -8,7 +8,8 @@ TallyMyGear::Application.routes.draw do
   # general pages
   get     'privacy' => 'site#privacy'
   get     'terms'   => 'site#terms'
-
+  get     'about'   =>  'site#about'
+  get     'contact' =>  'site#contact'
 
   # logging in and out
   get     'login'   => 'session#new'

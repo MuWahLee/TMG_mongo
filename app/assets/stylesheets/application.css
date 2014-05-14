@@ -11,6 +11,7 @@ footer {
   padding-right:    15px;
   background-color: #fff;
   text-align:       center;
+  font-size:        8px;
 }
 
 .own_detail {
@@ -123,4 +124,10 @@ th {
 .img-circle {
   width:  150px;
   height: 150px;
+}
+
+/*** FORMS ***/
+
+#selector {
+  border-radius: 50px !important;
 }
