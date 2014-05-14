@@ -49,10 +49,13 @@
 
           <h2 class="sub-header">All gear</h2>
           <div class="table-responsive">
-            <table class="table table-striped">
+          <div class="input-group"> <span class="input-group-addon">Filter</span>
+              <input id="filter" type="text" class="form-control" placeholder="Filter">
+          </div>
+
+            <table class="table table-striped filter">
               <thead>
                 <tr>
-<!--                   <th>Select</th> -->
                   <th>Category</th>
                   <th>Name</th>
                   <th class="col_wt">Weight (grams)</th>
@@ -60,7 +63,7 @@
 
                 </tr>
               </thead>
-              <tbody>
+              <tbody class="searchable"  id="table">
               <% @products.each do |product| %>
                 <tr>
                   <td><%= product.product_category %></td>

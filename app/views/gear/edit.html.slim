@@ -2,6 +2,13 @@
 = form_for @current_user, url: gear_form_url, method: :patch do |f|
   h2.sub-header Select my gear
   .table-responsive
+    .input-group
+      span.input-group-addon Filter
+      input#filter.form-control placeholder="Filter" type="text"
+
+    a id="show-ticked" href="#" Show Ticked Only
+    a id="show-sall" href="#" Show All
+
     table.table.table-striped
       thead
         tr
@@ -16,7 +23,7 @@
           th.th_7 colspan="3"           = "Tally My Gear - Totals"
           th#weight.th_2 colspan="1"    = @weight
           th#calories.th_3 colspan="1"  = @calories
-      tbody
+      tbody.searchable
         = f.collection_check_boxes :product_ids, @products, :id, :product_name do |b|
           - product = b.instance_variable_get(:@object)
           tr.product_item

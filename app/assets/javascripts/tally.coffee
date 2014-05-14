@@ -1,5 +1,3 @@
-
-
 $ ->
   sum_weight = parseInt($('#weight').html()) || 0
   sum_calories = parseInt($('#calories').html()) || 0
@@ -17,5 +15,17 @@ $ ->
     $('#calories').html(sum_calories)
 
 
+  $("#filter").keyup ->
+    rex = new RegExp($(this).val(), "i")
+    $(".searchable tr").hide()
+    $(".searchable tr").filter(->
+      rex.test $(this).text()
+    ).show()
+    return
 
+  $('').click ->
+    # filter ->
+    # if is checked
 
+  $('all').click ->
+    $(".searchable tr").show()
