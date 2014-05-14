@@ -29,3 +29,15 @@ $ ->
 
   $('all').click ->
     $(".searchable tr").show()
+
+
+
+
+#     $('.product_box').on "click",(e) =>
+#     $('#table tbody').find('tr:not(:has(:checkbox:checked))').hide();
+# });
+
+# $('#resetButt').click(function(){
+#     $('#tableId1').find('tr').show();
+#     $('#tableId1 input:checkbox').removeAttr('checked');
+# });

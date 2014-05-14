@@ -21,7 +21,7 @@ div class="table-responsive"
         td.col_cat    => @product.product_category
         td.col_wt     => @product.product_weight
         td.col_cal    => @product.product_calories
-        td.col_img    => @product.product_image.url
+        td.col_img    => image_tag @product.product_image.url
         td.col_act    = link_to "edit", edit_product_url(@product)
         td.col_act    = link_to "delete", product_url(@product), method: :delete,
           confirm: "are you sure you want to delete ' #{@product.product_name} ' ?"

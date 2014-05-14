@@ -1,54 +1,62 @@
-.container
+/ .container.img-home
+/     .col-md-11.col-md-offset-2
+/       <div class="col-xs-6 col-sm-3 placeholder text-center">
+/         <img src="assets/outdoor19.jpg" class="center-block img-circle" alt="Generic placeholder thumbnail">
+/       <p class="p-home">1</p>
+/       <span class="p-home">Sign in or Register</span>
+/       </div>
+
+/       <div class="col-xs-6 col-sm-3 placeholder text-center">
+/         <img src="assets/outdoor15.jpg" class="center-block img-circle" alt="Generic placeholder thumbnail">
+/         <p class="p-home">2</p>
+/         <span class="p-home">Select or Add gear</span>
+/       </div>
+
+/       <div class="col-xs-6 col-sm-3 placeholder text-center">
+/         <img src="assets/outdoor10.jpg" class="center-block img-circle" alt=".jpg" class="center-block img-circle" alt="Generic placeholder thumbnail">
+/         <p class="p-home">3</p>
+/         <span class="p-home">Create your lists</span>
+/       </div>
+
+
+.container.fluid
   .row
-      <div class="col-xs-6 col-sm-3 placeholder text-center">
-        <p class="center-block img-circle">DO THIS</p>
-      </div>
+    .col-md-4.blank
+      <p></p>
+      <br />
 
-      <div class="col-xs-6 col-sm-3 placeholder text-center">
-        <img src="assets/footwear3.jpg" class="center-block img-circle" alt="Generic placeholder thumbnail">
-      </div>
-
-      <div class="col-xs-6 col-sm-3 placeholder text-center">
-        <img src="assets/accessories3.jpg" class="center-block img-circle" alt="Generic placeholder thumbnail">
-      </div>
-
-
-
-
-main.container role="main"
+.container.fluid
   .row
-    .col-md-4.col-md-offset-4
+    .col-md-4.img-home
 
+      <span class="glyphicon glyphicon-user"> sign in or register</p>
+      <br />
+      <span class="glyphicon glyphicon-pencil"> Add or select gear</p>
+      <br />
+      <span class="glyphicon glyphicon-list-alt">  Create a list</span>
+      <br />
+      / <br />
+      / <br />
+      / <br />
+
+  .row
+    .col-md-4.img-home
       = form_for :user, url: login_url, html: { id: "loginform"} do |f|
         fieldset
 
-          legend Please Sign In
+          legend Sign in here
           / .form-group = flash.map {| key, value| "#{key.capitalize}: #{value}"}.join(";")
 
           .form-group
-            / div class="form-group"
-            / label for="user_email" class="input-group input-group-lg" Email
             = f.label :email, class: "input-group input-group-lg"
-            / input type="text" id="user_email" name="user[email]" placeholder="Email Address"
             = f.text_field :email, class: "form-control" ,placeholder: "Email Address"
 
 
           .form-group
-            / div class="form-group"
-            / label for="user_password" class="input-group input-group-lg" Password
             = f.label :user_password, class: "input-group input-group-lg"
-            / input type="password" id="user_password" name="user[password]" placeholder="Password"
             = f.password_field :password, class: "form-control", placeholder: "Password"
 
 
           .form-group
-            / div class="form-group"
-            / input type="submit" value="Sign In" class="btn btn-success"
             = f.submit "Sign In", class: "btn btn-success"
-            / input type="submit" value="Register" class="btn btn-info"
-            / = f.submit "Register", class: "btn btn-info"
 
-  / ol
-  / - @users.each do |some_user|
-  /   li
-  /     = some_user.email
