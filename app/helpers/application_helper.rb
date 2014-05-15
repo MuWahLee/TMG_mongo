@@ -10,6 +10,10 @@ module ApplicationHelper
     ) unless flash.empty?
   end
 
+  def something
+    javascript_tag "alert('All is good')"
+  end
+
   private
 
   def get_type(name)
@@ -35,6 +39,7 @@ module ApplicationHelper
   def flash_to_noties
     flash.map do |name, message|
       if message.is_a?(String) || message.is_a?(ActiveModel::Errors)
+
         get_noty_call get_type(name), get_timeout(name), get_text(message)
       end
     end

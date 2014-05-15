@@ -23,12 +23,22 @@ $ ->
     ).show()
     return
 
-  $('').click ->
+  $('#show-ticked').on "click", (e) ->
+    e.preventDefault()
+    $('.product_box').each ->
+      if !this.checked
+        $(@).closest('tr').hide()
+
+
+  $("#show-all").on "click", (e) ->
+    e.preventDefault()
+    $('tr').show()
+
     # filter ->
     # if is checked
 
-  $('all').click ->
-    $(".searchable tr").show()
+  # $('all').click ->
+  #   $(".searchable tr").show()
 
 
 
