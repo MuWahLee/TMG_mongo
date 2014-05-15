@@ -18,45 +18,45 @@
 /         <span class="p-home">Create your lists</span>
 /       </div>
 
+.container.float-left
+  .container.fluid
+    .row
+      .col-md-4.blank
+        <p></p>
+        <br />
 
-.container.fluid
-  .row
-    .col-md-4.blank
-      <p></p>
-      <br />
+  .container.fluid
+    .row
+      .col-md-4.img-home
 
-.container.fluid
-  .row
-    .col-md-4.img-home
+        <span class="glyphicon glyphicon-user"> sign in or register</p>
+        <br />
+        <span class="glyphicon glyphicon-ok-circle"> Add or select gear</p>
+        <br />
+        <span class="glyphicon glyphicon-list">  Create a list</span>
+        <br />
+        / <br />
+        / <br />
+        / <br />
 
-      <span class="glyphicon glyphicon-user"> sign in or register</p>
-      <br />
-      <span class="glyphicon glyphicon-pencil"> Add or select gear</p>
-      <br />
-      <span class="glyphicon glyphicon-list-alt">  Create a list</span>
-      <br />
-      / <br />
-      / <br />
-      / <br />
+    .row
+      .col-md-4.img-home
+        = form_for :user, url: login_url, html: { id: "loginform"} do |f|
+          fieldset
 
-  .row
-    .col-md-4.img-home
-      = form_for :user, url: login_url, html: { id: "loginform"} do |f|
-        fieldset
+            legend Sign in here
+            / .form-group = flash.map {| key, value| "#{key.capitalize}: #{value}"}.join(";")
 
-          legend Sign in here
-          / .form-group = flash.map {| key, value| "#{key.capitalize}: #{value}"}.join(";")
-
-          .form-group
-            = f.label :email, class: "input-group input-group-lg"
-            = f.text_field :email, class: "form-control" ,placeholder: "Email Address"
-
-
-          .form-group
-            = f.label :user_password, class: "input-group input-group-lg"
-            = f.password_field :password, class: "form-control", placeholder: "Password"
+            .form-group
+              = f.label :email, class: "input-group input-group-lg"
+              = f.text_field :email, class: "form-control" ,placeholder: "Email Address"
 
 
-          .form-group
-            = f.submit "Sign In", class: "btn btn-success"
+            .form-group
+              = f.label :user_password, class: "input-group input-group-lg"
+              = f.password_field :password, class: "form-control", placeholder: "Password"
+
+
+            .form-group
+              = f.submit "Sign In", class: "btn btn-success"
 
