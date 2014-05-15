@@ -9,6 +9,14 @@ body {
 body.landing {
   background:       url(outdoor21.jpg) no-repeat center center fixed;
 }
+
+body.registration{
+  background:       url(outdoor21.jpg) no-repeat center center fixed;
+  height:100%;
+  width: 100%;
+
+}
+
 footer {
   padding-left:     15px;
   padding-right:    15px;
@@ -157,7 +165,7 @@ th {
   height: 150px;
 }
 
-.img-home{
+.img-home {
   margin:           0px;
   padding:          30px;
   background-color: hsla(0, 0%, 14%, 1);

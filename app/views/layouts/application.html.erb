@@ -11,6 +11,8 @@
 <%
 if current_page?(:controller => 'session', :action => 'new')
   body_class = 'landing'
+elsif current_page?(:controller => 'register', :action => 'new_user')
+  body_class = 'registration'
 else
   body_class = ''
 end
@@ -54,9 +56,8 @@ end
   <!-- JavaScript jQuery code from Bootply.com editor  -->
 
 
-<!-- flashy -->
+
 <%= flash_noty_script_tag %>
-<%= flash.inspect %>
-<!-- after flashy -->
+
 </body>
 </html>

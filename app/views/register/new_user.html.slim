@@ -1,32 +1,48 @@
-main.container role="main"
-  .row
-    .col-md-4.col-md-offset-4
+.container.float-left
+  .container.fluid
+    .row
+      .col-md-4.blank
+        <p></p>
+        <br />
+
+  .container.fluid
+    .row
+      .col-md-4.img-home
+
+        <span class="glyphicon glyphicon-user"> sign in or register</p>
+        <br />
+        <span class="glyphicon glyphicon-ok-circle"> Add or select gear</p>
+        <br />
+        <span class="glyphicon glyphicon-list">  Create a list</span>
+        <br />
 
 
-      = form_for :user, url: register_url, method: :post, html: { id: "registrationform"} do |f|
-        fieldset
+    .row
+      .col-md-4.img-home
+        = form_for :user, url: register_url, method: :post, html: { id: "registrationform"} do |f|
+          fieldset
 
-          legend Register here
+            legend Register here
 
-          .form-group
-            = f.label :first_name, class: "input-group input-group-lg"
-            = f.text_field :first_name, class: "form-control" ,placeholder: "First name"
+            .form-group
+              = f.label :first_name, class: "input-group input-group-lg"
+              = f.text_field :first_name, class: "form-control" ,placeholder: "First name"
 
-          .form-group
-            = f.label :last_name, class: "input-group input-group-lg"
-            = f.text_field :last_name, class: "form-control" ,placeholder: "Last name"
+            .form-group
+              = f.label :last_name, class: "input-group input-group-lg"
+              = f.text_field :last_name, class: "form-control" ,placeholder: "Last name"
 
-          .form-group
-            = f.label :email, class: "input-group input-group-lg"
-            = f.text_field :email, class: "form-control" ,placeholder: "Email Address"
+            .form-group
+              = f.label :email, class: "input-group input-group-lg"
+              = f.text_field :email, class: "form-control" ,placeholder: "Email Address"
 
-          .form-group
-            = f.label :password, class: "input-group input-group-lg"
-            = f.password_field :password, class: "form-control", placeholder: "Password"
+            .form-group
+              = f.label :password, class: "input-group input-group-lg"
+              = f.password_field :password, class: "form-control", placeholder: "Password"
 
-          .form-group
-            = f.label :password_confirmation, class: "sr-only"
-            = f.password_field :password_confirmation, class: "form-control", placeholder: "Type in your password again"
+            .form-group
+              = f.label :password_confirmation, class: "sr-only"
+              = f.password_field :password_confirmation, class: "form-control", placeholder: "Type in your password again"
 
-          .form-group
-            = f.submit "Register", class: "btn btn-info"
+            .form-group
+              = f.submit "Register", class: "btn btn-info"
