@@ -1,0 +1,1 @@
+TallyMyGear::Application.config.secret_key_base = 'd4cfb9137866e17881795f6b1636a551c405d72ca886553e452dd8bfa669eed4a70bf0cf04e48891fcbb5ca1b6c6ac83ff0d4db7bf3eab3a25e5c5e2e3785492'

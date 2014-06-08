@@ -35,24 +35,24 @@ User.create([
   ])
 
 products = Product.create([
-  {:product_name=>"Gel Shots",
+  {:product_name=>"Powerbar Gel Shots - Flavour: Cola",
     :product_category=>"Food",
-    :product_weight=>50,
-    :product_calories=>9999
+    :product_weight=>60,
+    :product_calories=>198
     },
-  {:product_name=>"Blister Pack",
+  {:product_name=>"Compeed Blister Pack",
     :product_category=>"Accessories",
-    :product_weight=>10,
-    :product_calories=>999
+    :product_weight=>25,
+    :product_calories=>0
     },
-  {:product_name=>"Sun Screen",
+  {:product_name=>"Sunscreen Plus 30+",
     :product_category=>"Accessories",
-    :product_weight=>150,
+    :product_weight=>135,
     :product_calories=>0
     },
   {:product_name=>"Mobile phone",
     :product_category=>"Accessories",
-    :product_weight=>136,
+    :product_weight=>112,
     :product_calories=>0
     },
   {:product_name=>"my favourite snacks",
@@ -60,24 +60,29 @@ products = Product.create([
     :product_weight=>45,
     :product_calories=>3000
     },
-  {:product_name=>"Whistle",
+  {:product_name=>"Coghlan 6 Function Whistle",
     :product_category=>"Accessories",
-    :product_weight=>1,
+    :product_weight=>55,
     :product_calories=>0
     },
-  {:product_name=>"Glide",
+  {:product_name=>"Glide - small",
     :product_category=>"Accessories",
-    :product_weight=>30,
+    :product_weight=>12.8,
     :product_calories=>0
     },
-  {:product_name=>"Cliff Energy Bar - Flavour: Peanut Butter",
+  {:product_name=>"Clif Energy Bar - Flavour: Peanut Toffee Buzz",
     :product_category=>"Food",
-    :product_weight=>75,
+    :product_weight=>70,
     :product_calories=>250
     },
-  {:product_name=>"Under Armour Singlet",
+  {:product_name=>"Clif Energy Bar - Flavour: Chocolate Almond Fudge",
+    :product_category=>"Food",
+    :product_weight=>70,
+    :product_calories=>250
+    },
+  {:product_name=>"Salomon Tee",
     :product_category=>"Clothing",
-    :product_weight=>18,
+    :product_weight=>195,
     :product_calories=>0
     },
   {:product_name=>"7 day High-energy ration pack",
@@ -85,89 +90,114 @@ products = Product.create([
     :product_weight=>3400,
     :product_calories=>16800
     },
-  {:product_name=>"Water bladder",
+  {:product_name=>"Raidlight Double Water bladder 3L",
     :product_category=>"Accessories",
-    :product_weight=>11,
+    :product_weight=>240,
     :product_calories=>0
     },
-  {:product_name=>"Cliff Energy Bar - Flavour: Cookies and Cream",
+  {:product_name=>"Clif Energy Bar - Flavour: Coconut Chocolate Chip",
     :product_category=>"Food",
     :product_weight=>75,
-    :product_calories=>250
+    :product_calories=>240
     },
-  {:product_name=>"Cliff Energy Bar - Flavour: Chocolate Brownie",
+  {:product_name=>"Clif Energy Bar - Flavour: Chocolate Brownie",
     :product_category=>"Food",
     :product_weight=>75,
-    :product_calories=>250
+    :product_calories=>240
     },
-  {:product_name=>"Hiking poles",
+  {:product_name=>"Black Diamond Distance Z Hiking poles",
     :product_category=>"Accessories",
-    :product_weight=>500,
+    :product_weight=>340,
     :product_calories=>0
     },
-  {:product_name=>"Cookset",
+  {:product_name=>"Komperdell ultralight Hiking poles",
     :product_category=>"Accessories",
-    :product_weight=>556,
+    :product_weight=>410,
     :product_calories=>0
     },
-  {:product_name=>"Expedition Foods - Flavour: Chicken Korma",
-    :product_category=>"Food",
+  {:product_name=>"Esbit Pocket Stove small",
+    :product_category=>"Accessories",
     :product_weight=>180,
-    :product_calories=>807
+    :product_calories=>0
+    },
+  {:product_name=>"Expedition Foods - Flavour: Chicken Tikka",
+    :product_category=>"Food",
+    :product_weight=>170,
+    :product_calories=>809
     },
   {:product_name=>"First aid pack (ultralight)",
     :product_category=>"Accessories",
-    :product_weight=>75,
+    :product_weight=>795,
     :product_calories=>0
     },
-  {:product_name=>"Salt tablets",
+  {:product_name=>"Salt Stick Dispenser mini",
     :product_category=>"Food",
-    :product_weight=>5,
+    :product_weight=>12,
     :product_calories=>0
-    },
-  {:product_name=>"Sun Screen",
-    :product_category=>"Accessories",
-    :product_weight=>150,
-    :product_calories=>900
-    },
-  {:product_name=>"Glide",
-    :product_category=>"Accessories",
-    :product_weight=>30,
-    :product_calories=>9999
-    },
-  {:product_name=>"Cliff Energy Bar - Flavour: Honey Crumble",
-    :product_category=>"Food",
-    :product_weight=>75,
-    :product_calories=>250
-    },
-  {:product_name=>"Blister Pack",
-    :product_category=>"Accessories",
-    :product_weight=>10,
-    :product_calories=>10
     },
   {:product_name=>"Emergency Blanket",
     :product_category=>"Accessories",
-    :product_weight=>15,
+    :product_weight=>113,
     :product_calories=>0
     },
   {:product_name=>"Nuun - Flavour: orange",
     :product_category=>"Food",
-    :product_weight=>20,
-    :product_calories=>500
+    :product_weight=>70,
+    :product_calories=>30
+    },
+  {:product_name=>"Nuun - Flavour: lemon-lime",
+    :product_category=>"Food",
+    :product_weight=>70,
+    :product_calories=>30
+    },
+  {:product_name=>"Nuun - Flavour: fruit punch",
+    :product_category=>"Food",
+    :product_weight=>70,
+    :product_calories=>30
     },
   {:product_name=>"Water purifying tablets",
     :product_category=>"Food",
-    :product_weight=>10,
+    :product_weight=>40,
     :product_calories=>0
     },
-  {:product_name=>"gloves",
+  {:product_name=>"Black Diamond lightweight gloves",
     :product_category=>"Clothing",
-    :product_weight=>4,
+    :product_weight=>36,
     :product_calories=>0
     },
-  {:product_name=>"hat",
+  {:product_name=>"Montane Featherlite Marathon Jacket",
     :product_category=>"Clothing",
-    :product_weight=>1,
+    :product_weight=>120,
+    :product_calories=>0
+    },
+  {:product_name=>"Salomon Lab Tank T-shirt",
+    :product_category=>"Clothing",
+    :product_weight=>90,
+    :product_calories=>0
+    },
+  {:product_name=>"Packtowl Ultralight Towel - medium",
+    :product_category=>"Accessories",
+    :product_weight=>22,
+    :product_calories=>0
+    },
+  {:product_name=>"Knife and Spork set",
+    :product_category=>"Accessories",
+    :product_weight=>26,
+    :product_calories=>0
+    },
+  {:product_name=>"Petzl Zipka Headlamp",
+    :product_category=>"Accessories",
+    :product_weight=>85,
+    :product_calories=>0
+    }, 
+  {:product_name=>"Osprey Talon 33l Pack",
+    :product_category=>"Accessories",
+    :product_weight=>900,
+    :product_calories=>0
+    },
+  {:product_name=>"Salomon Cap",
+    :product_category=>"Clothing",
+    :product_weight=>60,
     :product_calories=>0
     }
   ])

@@ -4,8 +4,11 @@
 <title>Tally My Gear</title>
 <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <%= stylesheet_link_tag "application", media: "all" %>
+<script type='text/javascript' src="http://code.jquery.com/jquery-latest.js"></script>
+
 
 <%= javascript_include_tag "application" %>
+<%= javascript_include_tag "jquery.tablesorter.min.js" %>
 <%= csrf_meta_tags %>
 </head>
 <%
@@ -55,8 +58,7 @@ end
 
 
 <!-- flashy -->
-<%= flash_noty_script_tag %>
-<%= flash.inspect %>
+
 <!-- after flashy -->
 </body>
 </html>
