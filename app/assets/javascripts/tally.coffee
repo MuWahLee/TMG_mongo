@@ -36,5 +36,32 @@ $ ->
 
 
   $(document).ready ->
-    $("#myTable").tablesorter()
+    $ ->
+      $("#myTable").tablesorter
+        theme: "blue"
+        sortList: [
+          [
+            1
+            0
+          ]
+          [
+            2
+            0
+          ]
+          [
+            3
+            0
+          ]
+        ]
+        headerTemplate: "{content}{icon}"
+        widgets: ["columns"]
+        widgetOptions:
+          columns: [
+            "primary"
+            "secondary"
+            "tertiary"
+          ]
+
+      return
+
     return
