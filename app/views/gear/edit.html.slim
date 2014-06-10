@@ -6,10 +6,13 @@
       span.input-group-addon Filter
       input#filter.form-control placeholder="Filter" type="text"
 
+    a id="show-all" href="#" Show All
+    '
+    ' /
     a id="show-ticked" href="#" Ticked Only
-    a id="show-all" href="#" All
 
-    table#myTable.table.table-striped.tablesorter
+
+    table#myTable.table.table-striped.filter.tablesorter
       thead
         tr
           th.col_check  = "Select"

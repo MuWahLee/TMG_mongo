@@ -1,6 +1,14 @@
+.container.float-left
+  .container.fluid
+    .row
+      .col-md-4.blank
+        <p></p>
+        <br />
+
+
 main.container role="main"
   .row
-    .col-md-4.col-md-offset-4
+    .col-md-4.img-home
 
 
       = form_for :user, url: register_url, method: :post, html: { id: "registrationform"} do |f|

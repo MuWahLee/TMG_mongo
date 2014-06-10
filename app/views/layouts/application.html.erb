@@ -16,6 +16,8 @@
 <%
 if current_page?(:controller => 'session', :action => 'new')
   body_class = 'landing'
+elsif current_page?(:controller => 'register', :action => 'new_user')
+  body_class = 'landing2'      
 else
   body_class = ''
 end

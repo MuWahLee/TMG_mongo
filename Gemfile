@@ -6,6 +6,7 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'slim'
+gem 'bson'
 gem 'bson_ext'
 gem 'mongoid', github:"mongoid/mongoid"
 gem 'bcrypt'
@@ -13,6 +14,10 @@ gem 'coffee-rails'
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'mongoid-grid_fs'
+gem 'mongo'
+gem 'genghisapp', '2.3.11'
+gem 'moped'
+gem 'json'
 
 group :development, :test do
   # gem "better_errors"
