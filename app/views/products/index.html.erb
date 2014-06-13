@@ -1,97 +1,38 @@
-<div class="container-fluid">
+<%= render partial: 'layouts/sidebar' %>
 
-      <div class="row row-offcanvas row-offcanvas-left">
+<h2 class="sub-header">All gear</h2>
+<div class="table-responsive">
+<div class="input-group"> <span class="input-group-addon">Filter</span>
+    <input id="filter" type="text" class="form-control" placeholder="Filter">
+</div>
 
-         <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
+  <table id="myTable" class="table table-striped filter tablesorter">
+    <thead>
+      <tr>
+        <th class="col_cat">Category</th>
+        <th class="col_name">Name</th>
+        <th class="col_wt">Weight (grams)</th>
+        <th class="col_cal">Calories (calories)</th>
 
-            <ul class="nav nav-sidebar">
+      </tr>
+    </thead>
+    <tbody class="searchable"  id="table">
+    <% @products.each do |product| %>
+      <tr>
+        <td class="col_cat"><%= product.product_category %></td>
+        <td class="col_name"><%= link_to product.product_name, product_url(product) %></td>
+        <td class="col_wt"><%= product.product_weight %></td>
+        <td class="col_cal"><%= product.product_calories %></td>
 
-              <li><a href="/products">All gear</a></li>
-              <li><a href="/gear">My gear</a></li>
-              <li><a href="/products/new">Add gear</a></li>
-            </ul>
-            <br />
-            <ul class="nav nav-sidebar">
-              <li><a href="/terms">Terms</a></li>
-              <li><a href="/privacy">Privacy</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">About</a></li>
-            </ul>
-
-
-
-        </div><!--/span-->
-
-        <div class="col-sm-9 col-md-10 main">
-
-          <!--toggle sidebar button-->
-          <p class="visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
-          </p>
-
-          <p class="welcome"> welcome <%= current_user.first_name %></p>
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder text-center">
-              <img src="assets/clothing.jpg" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
-              <h4>Clothing</h4>
-<!--               <span class="text-muted">Something else</span> -->
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder text-center">
-              <img src="assets/footwear3.jpg" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
-              <h4>Footwear</h4>
-<!--               <span class="text-muted">Something else</span> -->
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder text-center">
-              <img src="assets/accessories3.jpg" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
-              <h4>Accessories</h4>
-<!--               <span class="text-muted">Something else</span> -->
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder text-center">
-              <img src="assets/food.jpg" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
-              <h4>Food</h4>
-<!--               <span class="text-muted">Something else</span> -->
-            </div>
-          </div>
-
-          <hr>
-
-          <h2 class="sub-header">All gear</h2>
-          <div class="table-responsive">
-          <div class="input-group"> <span class="input-group-addon">Filter</span>
-              <input id="filter" type="text" class="form-control" placeholder="Filter">
-          </div>
-
-            <table id="myTable" class="table table-striped filter tablesorter">
-              <thead>
-                <tr>
-                  <th class="col_cat">Category</th>
-                  <th class="col_name">Name</th>
-                  <th class="col_wt">Weight (grams)</th>
-                  <th class="col_cal">Calories (calories)</th>
-
-                </tr>
-              </thead>
-              <tbody class="searchable"  id="table">
-              <% @products.each do |product| %>
-                <tr>
-                  <td class="col_cat"><%= product.product_category %></td>
-                  <td class="col_name"><%= link_to product.product_name, product_url(product) %></td>
-                  <td class="col_wt"><%= product.product_weight %></td>
-                  <td class="col_cal"><%= product.product_calories %></td>
-
-                </tr>
-                <% end %>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th colspan="2">Tally My Gear - Totals</th>
-                  <th colspan="1"></th>
-                  <th colspan="1"></th>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-
-      </div><!--/row-->
-  </div>
-</div><!--/.container-->
+      </tr>
+      <% end %>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th colspan="2">Tally My Gear - Totals</th>
+        <th colspan="1"></th>
+        <th colspan="1"></th>
+      </tr>
+    </tfoot>
+  </table>
+</div>

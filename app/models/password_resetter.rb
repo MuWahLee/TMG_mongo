@@ -1,6 +1,6 @@
 class PasswordResetter
 
-  SUCCESS = "We'll send you an email with instrutions for resetting"
+  SUCCESS = "We'll send you an email with instructions for resetting your password"
   NO_MAIL = "Unable to send email. Please notify webmaster"
   NO_SAVE = "Password reset failed. Please notify webmaster"
   NO_USER = "Unable to log you in. Please check your Email and Password again "
@@ -19,7 +19,7 @@ class PasswordResetter
 
   def update_password(user, params)
     if user.reset_password ( params )
-      UserNotifier.password_was_reset( user ).deliver
+      UserMailer.password_was_reset( user ).deliver
       return true
     end
   end
@@ -36,7 +36,7 @@ class PasswordResetter
 
   def send_reset_email
     begin
-      UserNotifier.reset_password(@user).deliver
+      UserMailer.reset_password(@user).deliver
       @flash.now[:notice] = SUCCESS
     rescue
       @flash.now[:alert] = NO_MAIL

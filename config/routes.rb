@@ -1,6 +1,8 @@
 TallyMyGear::Application.routes.draw do
 
 
+  resources :users
+
   root    'products#index'
 
   resources :products

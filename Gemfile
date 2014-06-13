@@ -15,7 +15,6 @@ gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'mongoid-grid_fs'
 gem 'mongo'
-gem 'genghisapp', '2.3.11'
 gem 'moped'
 gem 'json'
 
